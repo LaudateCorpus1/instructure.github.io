@@ -40,7 +40,8 @@ Let's build this in Ember. For something as simple as this example, a [Handlebar
 {% raw %}
 ```js Ember
 Ember.Handlebars.helper('hello-message', function(name) {
-  return new Handlebars.SafeString('<div>Hello ' + name + '</div>');
+  var escaped = Handlebars.Utils.escapeExpression(name);
+  return new Handlebars.SafeString('<div>Hello ' + escaped + '</div>');
 });
 
 {{{hello-message "John"}}}
@@ -49,7 +50,7 @@ Ember.Handlebars.helper('hello-message', function(name) {
 
 ### Example:
 
-<a class="jsbin-embed" href="http://jsbin.com/ecAJuxE/3/embed?html,js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/ecAJuxE/4/edit?html,js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## A Stateful Component
 

@@ -51,12 +51,12 @@ Feel free to ask questions in the comments if you have any.
 
 Resources:
 -------------
-####Retrofit:
+### Retrofit:
 *   [Source and Samples](https://github.com/square/retrofit) (Source and samples)
 *   [Square Homepage](http://square.github.io/retrofit/)
 *   [Square Google+ Community](https://plus.google.com/u/0/communities/109244258569782858265)
 
-####Volley:
+### Volley:
 *   [Source](https://android.googlesource.com/platform/frameworks/volley/)
 *   [Demonstration](https://developers.google.com/live/shows/474338138)
 *   [Github of Examples](https://github.com/ogrebgr/android_volley_examples)

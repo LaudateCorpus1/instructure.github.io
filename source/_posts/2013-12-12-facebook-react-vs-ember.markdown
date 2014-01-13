@@ -90,23 +90,26 @@ App.TimeOnPageComponent = Em.Component.extend({
   tick: function() {
     this.incrementProperty('secondsViewed');
   },
-  
+
+  onInterval: function(){
+    Ember.run(this, this.tick);
+  },
+    
   // Initiates timer when element is rendered
   startTimer: function() {
-    Ember.run.next(this, function() {
-      this.interval = setInterval(this.tick.bind(this), 1000);
-    });
+    this._interval = setInterval(this.onInterval.bind(this), 1000);
   }.on('didInsertElement'),
   
   // Ensure that the timer stops when closed
   clearInterval: function() {
-    clearInterval(this.interval);
+    clearInterval(this._interval);
+    this._interval = null;
   }.on('willDestroyElement')
 });
 ```
 
 ### Example:
-<a class="jsbin-embed" href="http://jsbin.com/OPeVeted/2/embed?js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/OPeVeted/6/embed?js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## An Application
 

@@ -10,6 +10,8 @@ categories:
 - JavaScript
 ---
 
+<div class="comment">Edited Jan 13, 2014 with minor changes which allow for testing timeouts in Ember.</div>
+
 We engineers at Instructure love [Ember](http://www.emberjs.com). We also love to learn about other frameworks and know which tools are the best for the job at hand. One of the newer frameworks to come out is React.
 
 [React](http://facebook.github.io/react/) is Facebook's new JavaScript library for building user interfaces. I'm excited to see another player in the game of front-end JS frameworks. When we have so much mind share going to a similar problem, we all win.
@@ -91,7 +93,9 @@ App.TimeOnPageComponent = Em.Component.extend({
   
   // Initiates timer when element is rendered
   startTimer: function() {
-    this.interval = setInterval(this.tick.bind(this), 1000);
+    Ember.run.next(this, function() {
+      this.interval = setInterval(this.tick.bind(this), 1000);
+    });
   }.on('didInsertElement'),
   
   // Ensure that the timer stops when closed
@@ -102,8 +106,7 @@ App.TimeOnPageComponent = Em.Component.extend({
 ```
 
 ### Example:
-
-<a class="jsbin-embed" href="http://jsbin.com/AFepecE/5/embed?js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/OPeVeted/2/embed?js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## An Application
 
@@ -152,7 +155,9 @@ When writing this in Ember, we would use both a controller and a handlebars temp
 
 ```js Ember (controller)
 App.ApplicationController = Em.ArrayController.extend({
-  content: [],
+  content: function() {
+    return [];
+  }.property(),
   
   btnLabel: function() {
     return "Add #" + (this.get('content.length') + 1);
@@ -187,7 +192,7 @@ App.ApplicationController = Em.ArrayController.extend({
 
 ### Example:
 
-<a class="jsbin-embed" href="http://jsbin.com/OkOLEze/3/embed?html,js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/OkOLEze/4/embed?html,js,output">Facebook React vs Ember</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## A Component Using External Plugins
 

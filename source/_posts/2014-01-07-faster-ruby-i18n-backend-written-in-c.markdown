@@ -51,7 +51,7 @@ optimizations to I18n, leading to some nice all around speedups.
 In your Gemfile, do
 
 ```ruby
-gem 'i18nema'
+gem RUBY_VERSION >= '2.0' ? 'i18nema' : 'i18nema19'
 ```
 
 and then put something like this in an initializer:

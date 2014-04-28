@@ -4,7 +4,7 @@
   <title><![CDATA[Category: EmberJS | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/emberjs/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2014-04-22T15:48:21-06:00</updated>
+  <updated>2014-04-28T09:42:10-06:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ember Tech Talks - April 2014]]></title>
+    <link href="http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014/"/>
+    <updated>2014-04-28T09:19:00-06:00</updated>
+    <id>http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014</id>
+    <content type="html"><![CDATA[<p>Each month, geeks from near and far join up at Instructure to teach and learn
+about <a href="http://emberjs.com">Ember.js</a>. This month we had 3 amazing presentations
+which range from beginner to expert level training.</p>
+
+<h2>Ember Functions, Computed Properties, Observers and More by <a href="https://twitter.com/DericAbel">Deric Abel</a></h2>
+
+<iframe width="586" height="440" src="http://instructure.github.io//www.youtube.com/embed/cIJCTd8qJcQ?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>Binding to Twitter Bootstrap with Ember by <a href="https://github.com/brettv">Brett Valentine</a></h2>
+
+<iframe width="586" height="440" src="http://instructure.github.io//www.youtube.com/embed/Z3-t4tF1OPA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p><a href="https://github.com/brettv/ember---bootstrap">Slides</a></p>
+
+<h2>répondez, s'il vous plaît &ndash; a deep dive into Ember Promise/RSVP by <a href="https://github.com/kingpin2k">Daniel Dunkley</a></h2>
+
+<iframe width="586" height="440" src="http://instructure.github.io//www.youtube.com/embed/8WXgm4_V85E?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p><a href="https://docs.google.com/presentation/d/1DYjd2BzCrj-no2V2NsqqEfsYlliUEWPf8hCtVVkX0lM/pub?start=false&amp;loop=false&amp;delayms=3000">Slides</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ember Run Loop and TDD]]></title>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: TDD | Instructure Tech Blog]]></title>
+  <link href="http://instructure.github.io/blog/categories/tdd/atom.xml" rel="self"/>
+  <link href="http://instructure.github.io/"/>
+  <updated>2014-05-14T08:29:22-06:00</updated>
+  <id>http://instructure.github.io/</id>
+  <author>
+    <name><![CDATA[Instructure]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Too big to test: combating test apathy in legacy code]]></title>
+    <link href="http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/"/>
+    <updated>2014-05-14T10:53:00-06:00</updated>
+    <id>http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code</id>
+    <content type="html"><![CDATA[<p>Writing tests for large Rails apps with lots of dependencies and complicated modeling is, without question, a complete nightmare. We often spend more time wrestling with tests than we do writing code. The end result of writing tests for legacy code is unfortunately predictable: a test suite full of holes, poor coverage, and tests that aren&rsquo;t actually testing the thing you think they are. Bugs begin to pile up, technical debt is avoided like the plague, and quick-fix bandaids are applied instead of addressing the problems head on.</p>
+
+<p>We are then faced with a dilemma: our app has become too big and too complicated to test, and we no longer want to write tests for it because it is so painful. This is unavoidable. No matter how many conference talks we attend that promise to teach us how to writing clean, maintainable code, we&rsquo;re still drowning in a bog of bad. The reality isn&rsquo;t that we&rsquo;re bad developers, it&rsquo;s that we don&rsquo;t dictate our workload, deadlines, or priorities. We have to make sacrifices in our code, which isn&rsquo;t a bad thing until it is. So how do we fix it? How do we take away the pain?</p>
+
+<p>The short answer: it&rsquo;s not easy to fix, and it takes time.</p>
+
+<!--more-->
+
+
+<h3>Prioritize technical test debt</h3>
+
+<p>There is no sense in prioritizing technical debt if you have technical test debt. No one wants to write tests for a messy test suite, and you can&rsquo;t fix problems in your code if the tests are contributing to them. Start chipping away at test apathy by improving the test writing and running experience. There are a few ways to quickly improve your testing environment.</p>
+
+<p><strong>Clean up your factories and spec helpers</strong></p>
+
+<p>Remove redundant factories or duplicate spec helpers. Helpers with miles of conditionals don&rsquo;t actually <em>help</em> anyone. Consider refactoring any method that takes a hash of options to be more semantically named. Search for factory settings or attributes, or helper methods arguments, you often find yourself using and make them the defaults instead of a passed argument.</p>
+
+<p>If you&rsquo;re using a homegrown factory system instead of a gem like <a href="https://github.com/thoughtbot/factory_girl">FactoryGirl</a>, considering refactoring your factories or completely re-writing them. Lots of bad or unused factories can accumulate when you have many developers working on the same code base.</p>
+
+<p><strong>Using Selenium? Delete your specs</strong></p>
+
+<p><em>&hellip; and re-write them</em>, preferably with a Selenium wrapper, such as <a href="https://github.com/jnicklas/capybara">Capybara</a>. Using a wrapper will also helper clean up your cluttered helper files for these specs.</p>
+
+<p>Selenium specs are a source of constant pain and heartache for developers: they take a long time to run, and they&rsquo;re incredibly complicated. It&rsquo;s a lot of test setup and clicking on stuff for <em>one</em> assertion. In lieu of comprehensive Selenium specs that handle all of your edge cases, improve your unit test coverage (on both the client- and server-side), consider writing end-to-end specs for happy paths, and invest in manual testing where people actually click on things. Simplify your Selenium specs and improve your developers' happiness by only testing your happy paths and expected error messages.</p>
+
+<p><strong>Organize your spec files properly</strong></p>
+
+<p>Do everyone a favor and fix your nesting. If you&rsquo;re using RSpec, you shouldn&rsquo;t have a <code>describe</code> block with a <code>context</code> that has two more sets of nested <code>context</code>s. If a <code>describe</code> or <code>context</code> block only has one test in it, consider re-organizing to incorporate it with other tests. If you&rsquo;re writing unit tests, use the <code>#my_method_name</code> syntax to group your tests together. Re-write tests that contain multiple assertions: why do you need to assert two things in one test? Assertions that loop through arrays or hashes are sometimes necessary, but they should only be checking one thing, not multiple attributes of your objects.</p>
+
+<p>Lastly, re-organize your file so it is in roughly the same order as your code. The first method in your class shouldn&rsquo;t be the second-to-last thing tested. A little file organization goes a long way when it comes to debugging and adding new tests.</p>
+
+<h3>Use your tools well</h3>
+
+<p>A hammer is not a screwdriver, nor is it a crowbar: don&rsquo;t make your developers be the whole toolbox.</p>
+
+<p><strong>QA Analysts: real humans you need</strong></p>
+
+<p>Your developers are not your users: they&rsquo;re your developers. While it is reasonable to expect a level of familiarity with your software, developers ultimately are not the ones using it on a day-to-day basis. They are not the experts on your software. You need experts, and they&rsquo;re not your developers.</p>
+
+<p>Automation is all fine and dandy, but you can&rsquo;t automate people: we&rsquo;re unpredictable and kind of stupid. The huge value in manual QAs and regression tests are that you can actually test your code against the human element. Your QAs Analysts are neither unpredictable nor stupid, but they can replicate that element of humans more realistically than automated tests can.</p>
+
+<p><strong>Regression tests are not a bandaid</strong></p>
+
+<p>Regression tests aren&rsquo;t just good for finding bugs: they are a tool that can help you spot the holes in your test suite. A bug fix for a regression test shouldn&rsquo;t just be a fix to the code, it should also repair the holes in your tests. Dig through your spec files: is the spec for that bug missing? Is it testing the wrong thing? Is the setup wrong? Fix it.</p>
+
+<p><strong>Don&rsquo;t monkey patch it</strong></p>
+
+<p>Use the gems, libraries, and tools as they are actually intended. Your test suite will rapidly spiral out of control (again) if you find yourself ripping apart your tools.</p>
+
+<h3>Maintenance mode</h3>
+
+<p>Fixing bad tests and cleaning up ugly factories is all well and good, but what happens long term? Maintaining a test suite is just as important as maintaining code. If you walk away from your test suite after putting in so much effort, it will be all:</p>
+
+<p><img src="http://25.media.tumblr.com/b60af898d2636d792de3089108562c91/tumblr_mt0qdlrZMR1siookko1_500.gif" alt="Miley Cyrus: &quot;Don't you every say I just walked away, I will always want you.&quot;" /></p>
+
+<p>Don&rsquo;t wreck your test suite by ignoring it.</p>
+
+<p><strong>Don&rsquo;t be afraid of repeating yourself</strong></p>
+
+<p>Sometimes DRY code is bad code, especially if you&rsquo;re creating unnecessary objects or making redundant database calls in your test setup. Clean up the setup that runs before each test, and make sure you&rsquo;re only creating what you need to.</p>
+
+<p><strong>Abstract after the fact</strong></p>
+
+<p>In the (paraphrased) <a href="https://speakerdeck.com/skmetz/all-the-little-things-rubyonales">words of Sandi Metz</a>: it is better to repeat yourself than to abstract the wrong thing. You don&rsquo;t have the perspective to abstract the right thing at the very beginning of your refactoring and cleaning process. To ensure you&rsquo;re not recreating the problem you&rsquo;re trying to fix, periodically block off time to review spec files for duplicate code that can be extracted. It takes time and hindsight, which is why reviewing spec files periodically is just as important as refactoring legacy code.</p>
+
+<p><strong>Remember that tests are code, too</strong></p>
+
+<p>Consider these two quotes:</p>
+
+<blockquote><p>&ldquo;Ugh, I have to write code. This has robbed me of my will to live.&rdquo;</p></blockquote>
+
+<p><em>No developer, anywhere, ever.</em></p>
+
+<blockquote><p>&ldquo;Ugh, I have to write tests. This has robbed me of my will to live.&rdquo;</p></blockquote>
+
+<p><em>All developers, on a daily basis.</em></p>
+
+<p>Why do we dread writing tests so much?</p>
+
+<p>A lot of developers approach tests as an after-the-fact thing: the code is done, it&rsquo;s time to write tests.</p>
+
+<p>But really, it should be: the code is done now that I&rsquo;ve written my tests.</p>
+
+<p>The virtue of TDD is that you <em>have</em> to write tests. You can&rsquo;t write code unless you&rsquo;ve written tests. This one factor has contributed largely to its success. I&rsquo;m not advocating for or against TDD, I&rsquo;m lobbying for you to consider your tests as an essential part of your code.</p>
+
+<p>If anything, a well-written test just proves that you&rsquo;re right, and who doesn&rsquo;t love being right?</p>
+
+<p><div class="about-box">
+  <a href="http://feministy.io"><img src="https://www.gravatar.com/avatar/c79fa237a028944ad06a4b0a50925120.png" class="avatar" align="left" /></a>
+  <p>
+    <a href="http://feministy.io" class="author-name" target="_blank">Liz Abinante</a> is an engineer for Instructure and co-leader of the <a href="http://www.meetup.com/Girl-Develop-It-Chicago-IL/" target="_blank">Girl Develop It Chicago chapter</a>. She is infectiously enthusiastic about web development, teaching, learning, and tacos. She enjoys writing and <a href="https://speakerdeck.com/feministy/" target="_blank">speaking</a> about education, diversity, and happiness in engineering. Previously, Liz has worked as a writer, editor, and knitwear designer.
+  </p>
+</div></p>
+]]></content>
+  </entry>
+  
+</feed>

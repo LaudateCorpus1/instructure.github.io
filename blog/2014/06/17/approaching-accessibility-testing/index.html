@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Approaching Accessibility Testing - Instructure Tech Blog</title>
+  <meta name="author" content="Instructure">
+
+  
+  <meta name="description" content="When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Instructure Tech Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<script src="/javascripts/moment.min.js"></script>
+<script src="/javascripts/jquery.bxslider.min.js"></script>
+<link href="/stylesheets/jquery.bxslider.css" rel="stylesheet" />
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9138420-21']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  
+  
+  <header role="banner">
+    <!-- <div class="fat-people"></div>
+    <div class="tiny-heads"></div> -->
+    
+    <hgroup>
+  
+    <h1><a href="/blog">Instructure Tech Blog</a></h1>
+    
+      <h2>Torpedoes of nerdy truth from the engineering team at Instructure</h2>
+    
+  
+</hgroup>
+
+
+  </header>
+  <nav role="navigation">
+<ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+
+
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:instructure.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+
+
+
+  <ul class="main-navigation">
+    <li><a href="/">Dev & Friends</a></li>
+  </ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Approaching Accessibility Testing</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:37:00-06:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing was correct. I fed a URL to an online accessibility evaluator, which then told me what elements were missing on the page (ie: an image did not have an alt tag). It wasn&rsquo;t until I met a blind person that I started to understand how people with visual impairments actually use the web. Over the years, I picked up a lot of insight on how to conduct accessibility testing, which I want to share with you.</p>
+
+<p> <!--more--></p>
+
+<p>Before I dive into the &ldquo;tips and tricks&rdquo;, I have to dispell a few myths:</p>
+
+<h2>Accessibility Myths</h2>
+
+<h3>Accessibility only affects blind people</h3>
+
+<p>Blind people are not the only ones affected by inaccessible websites; they  affect people with impaired motorskills, colorblindness, the elderly, amongst others. Accessibility testing is necessary because we as human beings should all have access to the web. If you and/or your company is not doing accessibility testing, bring it up at the next meeting.</p>
+
+<h3>Assistive technology is super cheap</h3>
+
+<p>Many people rely on screenreading software and/or a braille display, and it can get very expensive. The license for JAWS, a popular screenreading software, costs anywhere from $895 USD to $1,095 USD, and another couple hundred dollars if you want to buy the upgrade that comes out once each year. Choosing to skip an upgrade may mean that the latest version of your web browser may not work well, or at all. A braille display, which is a device that displays braille using pins that move up and down (a necessity if you are deafblind), can cost thousands of dollars. And this is only for your computer &ndash; you have to pay more money on top of that for your mobile devices. Imagine if you had to pay for all that, and it only worked part of the time. It&rsquo;s like buying a car that only runs on Tuesdays.</p>
+
+<h3>Assistive technology is always up to date</h3>
+
+<p>Technology changes so fast that, when we buy the newest smartphone, it becomes outdated months later. In the same way, assistive technology is often behind new web technologies. Screenreaders can&rsquo;t keep up with the fast pace of web development, which includes the new javascript every other week.</p>
+
+<h3>All screenreaders are the same, I only have to test with one</h3>
+
+<p>Like browsers, not all screenreading software is alike. Mac OSX has a built in screenreader called &ldquo;VoiceOver&rdquo;, which you can enable in the Accessibility section of your System Preferences. It also includes a comprehensive guided tutorial. For Windows, two popular options are JAWS and NVDA. NVDA is free and open source, and is available in many languages. For Linux users, Orca, which is also free and open source, is a great option. The screenreader output can greatly vary; when you navigate to a &ldquo;Close&rdquo; button on a modal window, you might hear &ldquo;Button Close Button&rdquo; from one, but hear &ldquo;Close Button&rdquo; from the other. Talk with your users and see what they are using, and if your budget allows, test with as many screenreaders as you can. At Instructure, we test Canvas using the latest version of VoiceOver and JAWS, and are currently evaluating NVDA.</p>
+
+<h3>Accessibility testing is the worst kind of testing</h3>
+
+<p>Testing of any kind can be painful, whether it be writing unit tests or doing user experience testing. Accessibility testing is also on that list, but realize the more you test, the more aware you will be when writing your code. You will start to look out for things here and there because you had to spend twenty minutes trying to navigate to a submenu in a previous commit.</p>
+
+<h3>I can just throw my website at an accesibility evaluator and call it good</h3>
+
+<p>Evaluators only look at the structure of your site, it doesn&rsquo;t emulate the user experience. We all know that, sometimes, what looks good on paper doesn&rsquo;t work out in real life. The same goes for an evaluator. It will tell you if your headers are out of order, but it won&rsquo;t tell you if your navigation is terrible because you are inconsistent with what keypress you are using for a certain element. You need actual people to test your site out. Which brings me to my next point&hellip;</p>
+
+<h3>Only blind people can do accessibility testing</h3>
+
+<p>Anyone who learns the software and/or hardware can do accessibility testing. At Instructure, we have our Quality Assurance (QA) engineers do a lot of the testing, and all of them are sighted. If you have questions and would like to ask someone who is blind, there are a lot of resources out there. For those in the education sector, many universities have a disability resource center &ndash; reach out to the coordinator there, and ask for permission to get feedback. Your city and/or state may also have a dedicated center. We also have the Internet for a reason, use it!</p>
+
+<h2>Where to start and how to test for accessibility</h2>
+
+<p>If you haven&rsquo;t already, run your site through an evaluator. There are many free accessibility evaluators online, where you feed the URL into an evaluator, and it tells you how accessible the page is. Two popular evaluators are <a href="http://wave.webaim.org/" title="WAVE Evaluator">WAVE</a> and <a href="http://fae.cita.uiuc.edu/" title="FAE Evaluator">FAE</a>. If you use FAE, note that it is evaluating in accordance with the Illlinois Information Technology Accessibility Act. Not all evaluators are running against the same guidelines, so find out what it is evaluating against. Many evaluators will use the <a href="http://www.w3.org/TR/WCAG/" title="W3C Guidelines">W3C Web Content Accessibility Guidelines</a>. The evaluator will show you any errors and provide feedback. Do you have redudant title text? Are your forms labeled? These are items that will be pointed out to you, which you can easily fix.</p>
+
+<p>Once you have your baseline, and fixed the structural elements, it&rsquo;s time to move on to testing with real people. Ask for feedback from your users and see what needs the most attention, and start there. Here are a few of the things we do:</p>
+
+<p>1) On each page we check to see if there are headers, a main landmark, and a complimentary landmark (if applicable). We also check for to see if there are any lists, forms, and tables on the page, and use the appropriate screenreader key. Many users navigate using these elements to quickly jump to content on a page. It&rsquo;s hard to scroll through an entire page, so make sure headers and landmarks are available for easy access.</p>
+
+<p>2) We try to use the keyboard as much as possible. Keyboard navigation is critical to many users, especially those with physical disabilities. Not everyone can use a trackpad for gestures, but most everyone has a keyboard.</p>
+
+<p>3) We heavily reference the keyboard layout and shortcuts provided by the screenreader we are using. When I first started accessibility testing, I used the tab key to go through the page. I didn&rsquo;t realize there were screenreader users and keyboard only users. If you are unsure of which keys correspond with which action, look up the keyboard layout for your respective screenreader.</p>
+
+<p>4) We look to see if our elements have consistency; not all of the elements on our pages share the same keypress, even if they look the same visually (which, we are working on). For example, don&rsquo;t have a &ldquo;Submit&rdquo; button that reads as a link on one page, and as a button on another. Make sure your elements are all the same under the hood.</p>
+
+<p>5) With links and buttons, we always make sure a user can read the link/button text and execute the appropriate action. Sometimes it will only read the link text and it won&rsquo;t open the link. Don&rsquo;t assume something works just because you can navigate to it.</p>
+
+<p>6) We look at a page from top to bottom, then outline all the elements in a spreadsheet. For example, under &ldquo;main body navigation&rdquo;, I would have &ldquo;Reads Assignment Title&rdquo;, &ldquo;Reads Published Button&rdquo;, and etc. Organizing and writing out all the elements and the location make it much easier for other people to read and follow your work.</p>
+
+<p>What we do at Instructure isn&rsquo;t limited to this list; this is merely a springboard for you to start. We also conduct accessibility audits, and actively work with our clients and other vendors. Instructure is also fortunate to have a dedicated accessibility team in addition to engineers who are passionate about accessibility on each individual core team of Canvas.</p>
+
+<p>Tackling accessibility testing may seem like a daunting task, but start with the steps outlined above. Your changes will start out small, and it may seem insignificant, but realize that every effort you make changes the web to be more accesible. Soon, you will be the one teaching others about what you&rsquo;ve learned, and how to make an accessible product. We at Canvas hope that one day, we&rsquo;ll be reading a blog post from you.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hannah Bottalla</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-17T16:37:00-06:00" pubdate data-updated="true">Jun 17<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/accessibility/'>accessibility</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/" data-via="" data-counturl="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/" title="Previous Post: Too big to test: combating test apathy in legacy code">&laquo; Too big to test: combating test apathy in legacy code</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Related Links</h1>
+  <ul id="recent_posts">
+    <li class="post">
+      <a href="http://www.instructure.com/">Canvas by Instructure</a>
+    </li>
+      <li class="post">
+      <a href="http://learning.instructure.com/">Keep Learning Blog</a>
+    </li>
+    <li class="post">
+      <a href="http://voice.instructure.com/blog/">Instructure Blog</a>
+    </li>
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/06/17/approaching-accessibility-testing/">Approaching Accessibility Testing</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/">Too Big to Test: Combating Test Apathy in Legacy Code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/28/ember-tech-talks-april-2014/">Ember Tech Talks - April 2014</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/21/android-image-sweep/">ImageSweep : Drawable Management for Android</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/24/ci/">Continuous Integration</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Instructure -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+
+<script>
+ 	$('body').addClass('active');
+</script>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'canvasdevandfriends';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/';
+        var disqus_url = 'http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

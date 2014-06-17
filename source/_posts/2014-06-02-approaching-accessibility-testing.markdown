@@ -50,7 +50,7 @@ If you haven't already, run your site through an evaluator. There are many free 
 
 Once you have your baseline, and fixed the structural elements, it's time to move on to testing with real people. Ask for feedback from your users and see what needs the most attention, and start there. Here are a few of the things we do:
 
-1) On each page we check to see if there are headers, a main landmark, and a complimentary landmark (if applicable). We also check for to see if there are any lists, forms, and tables on the page, and use the appropriate screenreader key. Many users navigate using these elements to quickly jump to content on a page. It's hard to scroll through an entire page, so make sure headers and landmarks are available for easy access.
+1) On each page we check to see if there are headers, a main landmark, and a complementary landmark (if applicable). We also check for to see if there are any lists, forms, and tables on the page, and use the appropriate screenreader key. Many users navigate using these elements to quickly jump to content on a page. It's hard to scroll through an entire page, so make sure headers and landmarks are available for easy access.
 
 2) We try to use the keyboard as much as possible. Keyboard navigation is critical to many users, especially those with physical disabilities. Not everyone can use a trackpad for gestures, but most everyone has a keyboard.
 

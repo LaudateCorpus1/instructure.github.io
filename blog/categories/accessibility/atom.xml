@@ -4,7 +4,7 @@
   <title><![CDATA[Category: accessibility | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/accessibility/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2014-06-17T08:48:41-06:00</updated>
+  <updated>2014-06-25T09:04:16-06:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -28,19 +28,19 @@
 
 <h3>Accessibility only affects blind people</h3>
 
-<p>Blind people are not the only ones affected by inaccessible websites; they  affect people with impaired motorskills, colorblindness, the elderly, amongst others. Accessibility testing is necessary because we as human beings should all have access to the web. If you and/or your company is not doing accessibility testing, bring it up at the next meeting.</p>
+<p>Blind people are not the only ones affected by inaccessible websites; they affect people with motor impairments, color blindness, or cognitive impairments, amongst others. Accessibility testing is necessary because we as human beings should all have access to the web. If you or your company is not doing accessibility testing, bring it up at the next meeting.</p>
 
 <h3>Assistive technology is super cheap</h3>
 
-<p>Many people rely on screenreading software and/or a braille display, and it can get very expensive. The license for JAWS, a popular screenreading software, costs anywhere from $895 USD to $1,095 USD, and another couple hundred dollars if you want to buy the upgrade that comes out once each year. Choosing to skip an upgrade may mean that the latest version of your web browser may not work well, or at all. A braille display, which is a device that displays braille using pins that move up and down (a necessity if you are deafblind), can cost thousands of dollars. And this is only for your computer &ndash; you have to pay more money on top of that for your mobile devices. Imagine if you had to pay for all that, and it only worked part of the time. It&rsquo;s like buying a car that only runs on Tuesdays.</p>
+<p>Many people rely on screenreading software or a braille display, and it can get very expensive. The license for JAWS, a popular screenreading software, costs anywhere from $895 USD to $1,095 USD, and another couple hundred dollars if you want to buy the upgrade that comes out once each year. Choosing to skip an upgrade may mean that the latest version of your web browser may not work well, or at all. A braille display, which is a device that displays braille using pins that move up and down (a necessity if you are deafblind), can cost thousands of dollars. And this is only for your computer &ndash; you have to pay more money on top of that for your mobile devices. Imagine if you had to pay for all that, and it only worked part of the time. It&rsquo;s like buying a car that only runs on Tuesdays.</p>
 
 <h3>Assistive technology is always up to date</h3>
 
-<p>Technology changes so fast that, when we buy the newest smartphone, it becomes outdated months later. In the same way, assistive technology is often behind new web technologies. Screenreaders can&rsquo;t keep up with the fast pace of web development, which includes the new javascript every other week.</p>
+<p>Technology changes so fast that, when we buy the newest smartphone, it becomes outdated months later. In the same way, assistive technology is often behind new web technologies. Screenreaders can&rsquo;t keep up with the fast pace of web development, which includes new features every other week.</p>
 
 <h3>All screenreaders are the same, I only have to test with one</h3>
 
-<p>Like browsers, not all screenreading software is alike. Mac OSX has a built in screenreader called &ldquo;VoiceOver&rdquo;, which you can enable in the Accessibility section of your System Preferences. It also includes a comprehensive guided tutorial. For Windows, two popular options are JAWS and NVDA. NVDA is free and open source, and is available in many languages. For Linux users, Orca, which is also free and open source, is a great option. The screenreader output can greatly vary; when you navigate to a &ldquo;Close&rdquo; button on a modal window, you might hear &ldquo;Button Close Button&rdquo; from one, but hear &ldquo;Close Button&rdquo; from the other. Talk with your users and see what they are using, and if your budget allows, test with as many screenreaders as you can. At Instructure, we test Canvas using the latest version of VoiceOver and JAWS, and are currently evaluating NVDA.</p>
+<p>Like browsers, not all screenreading software is alike. Mac OS X has a built in screenreader called &ldquo;VoiceOver&rdquo;, which you can enable in the Accessibility section of your System Preferences. It also includes a comprehensive guided tutorial. For Windows, two popular options are JAWS and NVDA. NVDA is free and open source, and is available in many languages. For Linux users, Orca, which is also free and open source, is a great option. The screenreader output can greatly vary; when you navigate to a &ldquo;Close&rdquo; button on a modal window, you might hear &ldquo;Button Close Button&rdquo; from one, but hear &ldquo;Close Button&rdquo; from the other. Talk with your users and see what they are using, and if your budget allows, test with as many screenreaders as you can. At Instructure, we test Canvas using the latest version of VoiceOver and JAWS, and are currently evaluating NVDA.</p>
 
 <h3>Accessibility testing is the worst kind of testing</h3>
 
@@ -48,11 +48,11 @@
 
 <h3>I can just throw my website at an accesibility evaluator and call it good</h3>
 
-<p>Evaluators only look at the structure of your site, it doesn&rsquo;t emulate the user experience. We all know that, sometimes, what looks good on paper doesn&rsquo;t work out in real life. The same goes for an evaluator. It will tell you if your headers are out of order, but it won&rsquo;t tell you if your navigation is terrible because you are inconsistent with what keypress you are using for a certain element. You need actual people to test your site out. Which brings me to my next point&hellip;</p>
+<p>An evaluator only looks at the structure of your site; it doesn&rsquo;t emulate the user experience. We all know that, sometimes, what looks good on paper doesn&rsquo;t work out in real life. The same goes for an evaluator. It will tell you if your headers are out of order, but it won&rsquo;t tell you if your navigation is terrible because you are inconsistent with what keypress you are using for a certain element. You need actual people to test your site out. Which brings me to my next point&hellip;</p>
 
 <h3>Only blind people can do accessibility testing</h3>
 
-<p>Anyone who learns the software and/or hardware can do accessibility testing. At Instructure, we have our Quality Assurance (QA) engineers do a lot of the testing, and all of them are sighted. If you have questions and would like to ask someone who is blind, there are a lot of resources out there. For those in the education sector, many universities have a disability resource center &ndash; reach out to the coordinator there, and ask for permission to get feedback. Your city and/or state may also have a dedicated center. We also have the Internet for a reason, use it!</p>
+<p>Anyone who learns the software or hardware can do accessibility testing. At Instructure, we have our Quality Assurance (QA) engineers do a lot of the testing, and all of them are sighted. If you have questions and would like to ask someone who is blind, there are a lot of resources out there. For those in the education sector, many universities have a disability resource center &ndash; reach out to the coordinator there, and ask for permission to get feedback. Your city or state may also have a dedicated center. We also have the Internet for a reason; use it!</p>
 
 <h2>Where to start and how to test for accessibility</h2>
 
@@ -68,13 +68,13 @@
 
 <p>4) We look to see if our elements have consistency; not all of the elements on our pages share the same keypress, even if they look the same visually (which, we are working on). For example, don&rsquo;t have a &ldquo;Submit&rdquo; button that reads as a link on one page, and as a button on another. Make sure your elements are all the same under the hood.</p>
 
-<p>5) With links and buttons, we always make sure a user can read the link/button text and execute the appropriate action. Sometimes it will only read the link text and it won&rsquo;t open the link. Don&rsquo;t assume something works just because you can navigate to it.</p>
+<p>5) With links and buttons, we always make sure a user can read the link/button text and execute the appropriate action. Sometimes it will only read the link text and won&rsquo;t open the link. Don&rsquo;t assume something works just because you can navigate to it.</p>
 
 <p>6) We look at a page from top to bottom, then outline all the elements in a spreadsheet. For example, under &ldquo;main body navigation&rdquo;, I would have &ldquo;Reads Assignment Title&rdquo;, &ldquo;Reads Published Button&rdquo;, and etc. Organizing and writing out all the elements and the location make it much easier for other people to read and follow your work.</p>
 
 <p>What we do at Instructure isn&rsquo;t limited to this list; this is merely a springboard for you to start. We also conduct accessibility audits, and actively work with our clients and other vendors. Instructure is also fortunate to have a dedicated accessibility team in addition to engineers who are passionate about accessibility on each individual core team of Canvas.</p>
 
-<p>Tackling accessibility testing may seem like a daunting task, but start with the steps outlined above. Your changes will start out small, and it may seem insignificant, but realize that every effort you make changes the web to be more accesible. Soon, you will be the one teaching others about what you&rsquo;ve learned, and how to make an accessible product. We at Canvas hope that one day, we&rsquo;ll be reading a blog post from you.</p>
+<p>Tackling accessibility testing may seem like a daunting task, but start with the steps outlined above. Your changes will start out small, and it may seem insignificant, but realize that every effort you make changes the web to be more accessible. Soon, you will be the one teaching others about what you&rsquo;ve learned, and how to make an accessible product. We at Canvas hope that one day, we&rsquo;ll be reading a blog post from you.</p>
 ]]></content>
   </entry>
   

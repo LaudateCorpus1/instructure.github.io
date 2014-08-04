@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: product | Instructure Tech Blog]]></title>
+  <link href="http://instructure.github.io/blog/categories/product/atom.xml" rel="self"/>
+  <link href="http://instructure.github.io/"/>
+  <updated>2014-08-04T10:19:47-06:00</updated>
+  <id>http://instructure.github.io/</id>
+  <author>
+    <name><![CDATA[Instructure]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Balanced Product Management]]></title>
+    <link href="http://instructure.github.io/blog/2014/08/04/balanced-product-management/"/>
+    <updated>2014-08-04T09:54:00-06:00</updated>
+    <id>http://instructure.github.io/blog/2014/08/04/balanced-product-management</id>
+    <content type="html"><![CDATA[<p>If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk about owning strategy, roadmaps, markets, and plans. You&rsquo;re like the CEO of your product and use your über creativity to find the special sauce and make all the decisions. Then everyone will be on board with your vision, singing your praises, and sparkly rainbow unicorns will lead your company down the path to IPO.</p>
+
+<p>However, all of that Being in Charge may actually be counterproductive to the mindset that will make you most successful—Not Being in Charge. The truth is, everyone else&rsquo;s input is far more important than mine.</p>
+
+<!--more-->
+
+
+<p>&ldquo;But,&rdquo; you say, &ldquo;product is supposed to be the mini-CEO and the vision, right? How can you be the vision if you&rsquo;re not deciding all the things?&rdquo;</p>
+
+<p>Here&rsquo;s the secret—what I want doesn&rsquo;t matter. The only thing that will make us win as a company is making an easier or better way for other people to do what they already do. That means that a good product person works for everyone. Users and buyers of our software (of course), engineers, support, client services, designers, salespeople, QA, executives, marketing—they&rsquo;re are all my boss. What they need comes way before what I want.</p>
+
+<p>The trick is in the balance. A good product person keeps an eye on where the market is going, what users need today, things that are confusing or broken, code that&rsquo;s old and crusty, what&rsquo;s losing sales to competitors, where the terrible UX/UI is, and all the executive initiatives.</p>
+
+<p><img class="right half" src="/images/product_eyes.jpg" width="400" height="400" title="&ldquo;This is the wrong way to do product.&rdquo; &ldquo;Many-eyed monster with OK on its shirt.&rdquo;" ></p>
+
+<p>However, having all those bosses doesn&rsquo;t mean you just do what they tell you to do. The other side to the balance is knowing enough about everything to be able to prioritize, say “no,” and live with your bosses' inevitable disapproval.</p>
+
+<p>Bug fixes bore marketing. Sales features add complexity for support. Engineers are sad working in ancient code. Executives need this thing to make money. To top it off, no one&rsquo;s asking for what you know they&rsquo;ll need next year or recognizes the magic in your <a href="http://brandinfluencegroup.com/blog/henry-ford-innovation-and-that-faster-horse-quote-patrick-vlaskovits-harvard-business-review/">new car idea</a>.</p>
+
+<p>Sound difficult? It is. You have to be passionate about supporting everyone and really feel their pain. You have to be patient enough to wait if the time isn&rsquo;t right and spend far more time listening than you do talking. You also have to be okay with very delayed reinforcement. But sometimes, when you get the balance just right, you really do get to be part of making a dent in the world.</p>
+]]></content>
+  </entry>
+  
+</feed>

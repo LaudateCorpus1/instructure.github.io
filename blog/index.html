@@ -9,7 +9,7 @@
   <meta name="author" content="Instructure">
 
   
-  <meta name="description" content="When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing &hellip;">
+  <meta name="description" content="If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +91,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/04/balanced-product-management/">Balanced Product Management</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-04T09:54:00-06:00" pubdate data-updated="true">Aug 4<span>th</span>, 2014</time>
+        
+         | <a href="/blog/2014/08/04/balanced-product-management/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk about owning strategy, roadmaps, markets, and plans. You&rsquo;re like the CEO of your product and use your über creativity to find the special sauce and make all the decisions. Then everyone will be on board with your vision, singing your praises, and sparkly rainbow unicorns will lead your company down the path to IPO.</p>
+
+<p>However, all of that Being in Charge may actually be counterproductive to the mindset that will make you most successful—Not Being in Charge. The truth is, everyone else&rsquo;s input is far more important than mine.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/08/04/balanced-product-management/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -571,53 +616,6 @@ a large Rails app like Canvas.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/09/volley-vs-retrofit/">Android Async HTTP Clients: Volley vs Retrofit</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-09T13:47:00-07:00" pubdate data-updated="true">Dec 9<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/12/09/volley-vs-retrofit/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We recently released a new version of our mobile app for Android. Although it was a huge improvement from previous installments in terms of features, design, and usability, there was one nagging issue in the back of our minds: speed. There are times when the app isn’t as snappy as we’d like it to be. After some profiling, benchmarks, and common sense, we determined that retrieving data from the API (the networking) was the bottleneck.</p>
-
-<h2>The Old Way: AsyncTasks</h2>
-
-<p>As of the latest version, we use the built-in AsyncTasks to retrieve data from Canvas’ servers. A quick Google search will explain the numerous issues with our approach: no orientation-change support, no ability to cancel network calls, as well as no easy way to make API calls in parallel. With the exception of Froyo and Gingerbread, AsyncTasks (by default) run in a serialized fashion. In a practical sense, this means that only one AsyncTask is running at any given time. Views that require multiple API calls (the DashBoard currently has 7) run extremely slow; sometimes taking multiple seconds to load.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/12/09/volley-vs-retrofit/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -647,6 +645,10 @@ a large Rails app like Canvas.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/08/04/balanced-product-management/">Balanced Product Management</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/06/17/approaching-accessibility-testing/">Approaching Accessibility Testing</a>
       </li>
     
@@ -660,10 +662,6 @@ a large Rails app like Canvas.</p>
     
       <li class="post">
         <a href="/blog/2014/04/21/android-image-sweep/">ImageSweep : Drawable Management for Android</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/02/24/ci/">Continuous Integration</a>
       </li>
     
   </ul>

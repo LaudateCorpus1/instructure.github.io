@@ -4,7 +4,7 @@
   <title><![CDATA[Category: accessibility | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/accessibility/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2014-08-04T10:19:47-06:00</updated>
+  <updated>2014-09-24T20:52:03-06:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Breaking the Rules: Accessible Dialog Components]]></title>
+    <link href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/"/>
+    <updated>2014-09-25T09:00:00-06:00</updated>
+    <id>http://instructure.github.io/blog/2014/09/25/accessible-dialogs</id>
+    <content type="html"><![CDATA[<p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
+
+<h2>Cursor Modes</h2>
+
+<p>When you first start building accessible websites, you learn quickly
+that there are different cursor modes when using Windows screen readers,
+<a href="http://tink.co.uk/2014/09/understanding-screen-reader-interaction-modes/">Léonie Watson explains them well here</a>.</p>
+
+<p>Certain element roles, like <code>application</code> and <code>dialog</code> will change the
+mode of the cursor. Very often this is not what you want. Yes, It does
+allow the developer to implement convenient keyboard events for the
+component, but it disables the normal keyboard navigation shortcuts for
+screen reader users. For sighted users, that would be a lot like opening
+your page up in Internet Explorer 5.5 on a mac.</p>
+
+<!--more-->
+
+
+<h2>The Problem With ARIA Dialogs</h2>
+
+<p>Unlike other components, dialogs and modals usually just contain regular
+content like the rest of the website. They don&rsquo;t need special keyboard
+navigation implementations, except for handling the escape key to
+request to close it.</p>
+
+<p>When you use <code>role="dialog"</code> the forms/focus cursor mode is activated
+and the screen reader user can&rsquo;t interact with the content in the dialog
+like they can with the rest of the website. In most cases, this results
+in much of the content in the dialog becoming completely inaccessible to
+them.</p>
+
+<h2>The Solution</h2>
+
+<p>The solution is to &ldquo;hide&rdquo; everything in the application&mdash;except the
+dialog&mdash;from the screen reader. This way the dialog can be navigated
+normally and the rest of the app is inaccessible until the dialog closes.</p>
+
+<p>In a nutshell:</p>
+
+<ol>
+<li>Don&rsquo;t use <code>role="dialog"</code>, to avoid switching cursor modes.</li>
+<li>When a dialog opens, set <code>aria-hidden="true"</code> on the rest of the
+page and focus the content of the modal.</li>
+<li>When a dialog closes, remove the <code>aria-hidden</code> attribute and return
+focus to the element that initiated it.</li>
+</ol>
+
+
+<p>The easiest thing to do is simply wrap your entire website in a
+containing element and then just manage <code>aria-hidden</code> on that one
+element instead of many.</p>
+
+<p>It would end up looking something like this:</p>
+
+<p>```html</p>
+
+<div id="app"> ... </div>
+
+
+<div class="dialog"> ... </div>
+
+
+<p>```</p>
+
+<p>And when the dialog is open:</p>
+
+<p>```html</p>
+
+<div id="app" aria-hidden="true"> ... </div>
+
+
+<div class="dialog"> ... </div>
+
+
+<p>```</p>
+
+<h2>But That&rsquo;s Not The Spec!</h2>
+
+<p>The spec probably needs to change to support dialogs where forms mode
+doesn&rsquo;t make sense. We implemented this in order to get Canvas certified
+as an accessible web application. The web moves fast and the specs don&rsquo;t
+always keep up.</p>
+
+<p>Until the specs catch up, and all the parties involved implement them,
+we choose to focus on the experience of our users (oh, right, and
+<a href="http://webaim.org/services/certification/">getting certified</a>).</p>
+
+<p><div class="about-box">
+  <img src="http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7?s=100" class="avatar" align="left" />
+  <p>
+    Ryan Florence heads up the Web Frameworks team at Instructure where
+    they chase both squirrels and JavaScript frameworks, inviting the
+    rest of the team to join them. Follow his adventures on 
+    <a href="https://github.com/rpflorence">Github</a> and 
+    <a href="http://twitter.com/ryanflorence">Twitter</a>.
+  </p>
+</div>
+</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Approaching Accessibility Testing]]></title>

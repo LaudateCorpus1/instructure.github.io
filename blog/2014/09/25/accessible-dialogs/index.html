@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Balanced Product Management - Instructure Tech Blog</title>
+  <title>Breaking the Rules: Accessible Dialog Components - Instructure Tech Blog</title>
   <meta name="author" content="Instructure">
 
   
-  <meta name="description" content="If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk &hellip;">
+  <meta name="description" content="Turns out, role="dialog" isn&rsquo;t your friend. Cursor Modes When you first start building accessible websites, you learn quickly
+that there are &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://instructure.github.io/blog/2014/08/04/balanced-product-management">
+  <link rel="canonical" href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Instructure Tech Blog" type="application/atom+xml">
@@ -94,7 +95,7 @@
   
   <header>
     
-      <h1 class="entry-title">Balanced Product Management</h1>
+      <h1 class="entry-title">Breaking the Rules: Accessible Dialog Components</h1>
     
     
       <p class="meta">
@@ -110,7 +111,7 @@
   
 
 
-<time datetime="2014-08-04T09:54:00-06:00" pubdate data-updated="true">Aug 4<span>th</span>, 2014</time>
+<time datetime="2014-09-25T09:00:00-06:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -119,26 +120,100 @@
   </header>
 
 
-<div class="entry-content"><p>If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk about owning strategy, roadmaps, markets, and plans. You&rsquo;re like the CEO of your product and use your über creativity to find the special sauce and make all the decisions. Then everyone will be on board with your vision, singing your praises, and sparkly rainbow unicorns will lead your company down the path to IPO.</p>
+<div class="entry-content"><p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
 
-<p>However, all of that Being in Charge may actually be counterproductive to the mindset that will make you most successful—Not Being in Charge. The truth is, everyone else&rsquo;s input is far more important than mine.</p>
+<h2>Cursor Modes</h2>
+
+<p>When you first start building accessible websites, you learn quickly
+that there are different cursor modes when using Windows screen readers,
+<a href="http://tink.co.uk/2014/09/understanding-screen-reader-interaction-modes/">Léonie Watson explains them well here</a>.</p>
+
+<p>Certain element roles, like <code>application</code> and <code>dialog</code> will change the
+mode of the cursor. Very often this is not what you want. Yes, It does
+allow the developer to implement convenient keyboard events for the
+component, but it disables the normal keyboard navigation shortcuts for
+screen reader users. For sighted users, that would be a lot like opening
+your page up in Internet Explorer 5.5 on a mac.</p>
 
 <!--more-->
 
 
-<p>&ldquo;But,&rdquo; you say, &ldquo;product is supposed to be the mini-CEO and the vision, right? How can you be the vision if you&rsquo;re not deciding all the things?&rdquo;</p>
+<h2>The Problem With ARIA Dialogs</h2>
 
-<p>Here&rsquo;s the secret—what I want doesn&rsquo;t matter. The only thing that will make us win as a company is making an easier or better way for other people to do what they already do. That means that a good product person works for everyone. Users and buyers of our software (of course), engineers, support, client services, designers, salespeople, QA, executives, marketing—they&rsquo;re are all my boss. What they need comes way before what I want.</p>
+<p>Unlike other components, dialogs and modals usually just contain regular
+content like the rest of the website. They don&rsquo;t need special keyboard
+navigation implementations, except for handling the escape key to
+request to close it.</p>
 
-<p>The trick is in the balance. A good product person keeps an eye on where the market is going, what users need today, things that are confusing or broken, code that&rsquo;s old and crusty, what&rsquo;s losing sales to competitors, where the terrible UX/UI is, and all the executive initiatives.</p>
+<p>When you use <code>role="dialog"</code> the forms/focus cursor mode is activated
+and the screen reader user can&rsquo;t interact with the content in the dialog
+like they can with the rest of the website. In most cases, this results
+in much of the content in the dialog becoming completely inaccessible to
+them.</p>
 
-<p><img class="right half" src="/images/product_eyes.jpg" width="400" height="400" title="This is the wrong way to do product." alt="Many-eyed monster with OK on its shirt."></p>
+<h2>The Solution</h2>
 
-<p>However, having all those bosses doesn&rsquo;t mean you just do what they tell you to do. The other side to the balance is knowing enough about everything to be able to prioritize, say “no,” and live with your bosses&#8217; inevitable disapproval.</p>
+<p>The solution is to &ldquo;hide&rdquo; everything in the application&mdash;except the
+dialog&mdash;from the screen reader. This way the dialog can be navigated
+normally and the rest of the app is inaccessible until the dialog closes.</p>
 
-<p>Bug fixes bore marketing. Sales features add complexity for support. Engineers are sad working in ancient code. Executives need this thing to make money. To top it off, no one&rsquo;s asking for what you know they&rsquo;ll need next year or recognizes the magic in your <a href="http://brandinfluencegroup.com/blog/henry-ford-innovation-and-that-faster-horse-quote-patrick-vlaskovits-harvard-business-review/">new car idea</a>.</p>
+<p>In a nutshell:</p>
 
-<p>Sound difficult? It is. You have to be passionate about supporting everyone and really feel their pain. You have to be patient enough to wait if the time isn&rsquo;t right and spend far more time listening than you do talking. You also have to be okay with very delayed reinforcement. But sometimes, when you get the balance just right, you really do get to be part of making a dent in the world.</p>
+<ol>
+<li>Don&rsquo;t use <code>role="dialog"</code>, to avoid switching cursor modes.</li>
+<li>When a dialog opens, set <code>aria-hidden="true"</code> on the rest of the
+page and focus the content of the modal.</li>
+<li>When a dialog closes, remove the <code>aria-hidden</code> attribute and return
+focus to the element that initiated it.</li>
+</ol>
+
+
+<p>The easiest thing to do is simply wrap your entire website in a
+containing element and then just manage <code>aria-hidden</code> on that one
+element instead of many.</p>
+
+<p>It would end up looking something like this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;app&quot;</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dialog&quot;</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And when the dialog is open:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;app&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dialog&quot;</span><span class="nt">&gt;</span> ... <span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>But That&rsquo;s Not The Spec!</h2>
+
+<p>The spec probably needs to change to support dialogs where forms mode
+doesn&rsquo;t make sense. We implemented this in order to get Canvas certified
+as an accessible web application. The web moves fast and the specs don&rsquo;t
+always keep up.</p>
+
+<p>Until the specs catch up, and all the parties involved implement them,
+we choose to focus on the experience of our users (oh, right, and
+<a href="http://webaim.org/services/certification/">getting certified</a>).</p>
+
+<div class="about-box">
+  <img src="http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7?s=100" class="avatar" align="left" />
+  <p>
+    Ryan Florence heads up the Web Frameworks team at Instructure where
+    they chase both squirrels and JavaScript frameworks, inviting the
+    rest of the team to join them. Follow his adventures on 
+    <a href="https://github.com/rpflorence">Github</a> and 
+    <a href="http://twitter.com/ryanflorence">Twitter</a>.
+  </p>
+</div>
+
+
+
 </div>
 
 
@@ -147,7 +222,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Hilary Scharton</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Ryan Florence</span></span>
 
       
 
@@ -161,12 +236,12 @@
   
 
 
-<time datetime="2014-08-04T09:54:00-06:00" pubdate data-updated="true">Aug 4<span>th</span>, 2014</time>
+<time datetime="2014-09-25T09:00:00-06:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/product/'>product</a>
+    <a class='category' href='/blog/categories/react/'>React</a>, <a class='category' href='/blog/categories/accessibility/'>accessibility</a>
   
 </span>
 
@@ -175,7 +250,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://instructure.github.io/blog/2014/08/04/balanced-product-management/" data-via="" data-counturl="http://instructure.github.io/blog/2014/08/04/balanced-product-management/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/" data-via="" data-counturl="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -188,10 +263,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/06/17/approaching-accessibility-testing/" title="Previous Post: Approaching Accessibility Testing">&laquo; Approaching Accessibility Testing</a>
+        <a class="basic-alignment left" href="/blog/2014/08/04/balanced-product-management/" title="Previous Post: Balanced Product Management">&laquo; Balanced Product Management</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/09/25/accessible-dialogs/" title="Next Post: Breaking the Rules: Accessible Dialog Components">Breaking the Rules: Accessible Dialog Components &raquo;</a>
       
     </p>
   </footer>
@@ -275,8 +348,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://instructure.github.io/blog/2014/08/04/balanced-product-management/';
-        var disqus_url = 'http://instructure.github.io/blog/2014/08/04/balanced-product-management/';
+        var disqus_identifier = 'http://instructure.github.io/blog/2014/09/25/accessible-dialogs/';
+        var disqus_url = 'http://instructure.github.io/blog/2014/09/25/accessible-dialogs/';
         var disqus_script = 'embed.js';
       
     (function () {

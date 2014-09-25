@@ -9,7 +9,8 @@
   <meta name="author" content="Instructure">
 
   
-  <meta name="description" content="If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk &hellip;">
+  <meta name="description" content="Turns out, role="dialog" isn&rsquo;t your friend. Cursor Modes When you first start building accessible websites, you learn quickly
+that there are &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +92,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/25/accessible-dialogs/">Breaking the Rules: Accessible Dialog Components</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-25T09:00:00-06:00" pubdate data-updated="true">Sep 25<span>th</span>, 2014</time>
+        
+         | <a href="/blog/2014/09/25/accessible-dialogs/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
+
+<h2>Cursor Modes</h2>
+
+<p>When you first start building accessible websites, you learn quickly
+that there are different cursor modes when using Windows screen readers,
+<a href="http://tink.co.uk/2014/09/understanding-screen-reader-interaction-modes/">Léonie Watson explains them well here</a>.</p>
+
+<p>Certain element roles, like <code>application</code> and <code>dialog</code> will change the
+mode of the cursor. Very often this is not what you want. Yes, It does
+allow the developer to implement convenient keyboard events for the
+component, but it disables the normal keyboard navigation shortcuts for
+screen reader users. For sighted users, that would be a lot like opening
+your page up in Internet Explorer 5.5 on a mac.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/09/25/accessible-dialogs/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -566,56 +623,6 @@ a large Rails app like Canvas.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/17/facebook-react-vs-ember/">Facebook React vs. Ember</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-17T08:54:00-07:00" pubdate data-updated="true">Dec 17<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/12/17/facebook-react-vs-ember/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class="comment">Edited Jan 13, 2014 with minor changes which allow for testing timeouts in Ember.</div>
-
-
-<p>We engineers at Instructure love <a href="http://www.emberjs.com">Ember</a>. We also love to learn about other frameworks and know which tools are the best for the job at hand. One of the newer frameworks to come out is React.</p>
-
-<p><a href="http://facebook.github.io/react/">React</a> is Facebook&rsquo;s new JavaScript library for building user interfaces. I&rsquo;m excited to see another player in the game of front-end JS frameworks. When we have so much mind share going to a similar problem, we all win.</p>
-
-<p>On the home page <a href="/images/posts/react-website.png">(screenshot)</a>, there are a few examples of how React can be used. I thought it might be fun to show how each of these can be done using Ember.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/12/17/facebook-react-vs-ember/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -645,6 +652,10 @@ a large Rails app like Canvas.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/25/accessible-dialogs/">Breaking the Rules: Accessible Dialog Components</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/08/04/balanced-product-management/">Balanced Product Management</a>
       </li>
     
@@ -658,10 +669,6 @@ a large Rails app like Canvas.</p>
     
       <li class="post">
         <a href="/blog/2014/04/28/ember-tech-talks-april-2014/">Ember Tech Talks - April 2014</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/21/android-image-sweep/">ImageSweep : Drawable Management for Android</a>
       </li>
     
   </ul>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just Follow the Types"
+title: "Swift: Just Follow the Types"
 date: 2015-02-05 14:11
 comments: true
 author: Derrick Hathaway

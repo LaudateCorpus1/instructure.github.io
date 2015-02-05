@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Ember Run Loop and TDD - Instructure Tech Blog</title>
+  <title>Just Follow the Types - Instructure Tech Blog</title>
   <meta name="author" content="Instructure">
 
   
-  <meta name="description" content="Each month, nerds unite at the Instructure building to share their knowledge on Ember. This month we had two presentations by a couple of Instructure &hellip;">
+  <meta name="description" content="As Mac and iOS craftsmen we&rsquo;ve been given a new tool. In some ways it looks a lot like the old tool, a tool we&rsquo;ve been using for many &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd">
+  <link rel="canonical" href="http://instructure.github.io/blog/2015/02/05/just-follow-the-types">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Instructure Tech Blog" type="application/atom+xml">
@@ -94,7 +94,7 @@
   
   <header>
     
-      <h1 class="entry-title">Ember Run Loop and TDD</h1>
+      <h1 class="entry-title">Just Follow the Types</h1>
     
     
       <p class="meta">
@@ -110,7 +110,7 @@
   
 
 
-<time datetime="2014-01-24T08:58:00-07:00" pubdate data-updated="true">Jan 24<span>th</span>, 2014</time>
+<time datetime="2015-02-05T14:11:00-07:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -119,30 +119,41 @@
   </header>
 
 
-<div class="entry-content"><p>Each month, <a href="http://www.meetup.com/EmberJS-SLC/">nerds unite</a> at the Instructure building to share their knowledge on <a href="http://www.emberjs.com">Ember</a>. This month we had two presentations by a couple of Instructure engineers. Here are the videos and accompanying slides/code.</p>
+<div class="entry-content"><p>As Mac and iOS craftsmen we&rsquo;ve been given a new tool. In some ways it looks a lot like the old tool, a tool we&rsquo;ve been using for many years now. In many ways it is very different. This tool is, of course, the Swift programming language.</p>
 
-<h2>Ember Run Loop</h2>
+<p>A strict type system is one thing that differentiates Swift from Objective-C.<!-- more --> This type system, along with other related features like generic types and custom operators, has started a movement among developers to adopt some techniques that Swift&rsquo;s predecessor made difficult or impossible. Some of these language features and techniques come from the language Haskell, one of the many languages Chris Lattner <a href="http://nondot.org/sabre/">drew inspiration from in creating Swift</a>.</p>
 
-<p>Jason Madsen (<a href="https://twitter.com/jason_madsen">@jason_madsen</a>) discussed the what, why, and how of the Ember Run Loop. Learn how Ember manages the run loop for you, and cases where you will want to manage the run loop. Here&rsquo;s a hint: speed and testing.</p>
+<p><img class="right half" src="https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg" width="375" height="500" title="An old rusty tool." alt="An old rusty tool."></p>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/RLgPBM72LQw" frameborder="0" allowfullscreen></iframe>
+<p>As I try to learn and adopt these new techniques I feel a bit like a woodworker who&rsquo;s been given a new tool, one with new features that I don&rsquo;t completely understand. One trick I&rsquo;ve learned is that with such a strong type system comes certain affordances.</p>
 
+<p>Let&rsquo;s look at an example.</p>
 
-<p><a href="http://knomedia.github.io/presentation_2014_01_23_ember_run_loop">Slides</a></p>
+<p><code>Optional</code> has a method called <code>map</code>. Now if you&rsquo;ve used <code>map</code> functions that are common for collection types you might be able to intuit what this map function does. An <code>Optional</code> isn&rsquo;t an array, however, so it might still be a little confusing. But if you take a moment to inspect the type of <code>map</code> you will see the trail of breadcrumbs.</p>
 
-<h2>Testing Your Ember Application using TDD</h2>
-
-<p>Eric Berry (<a href="https://twitter.com/cavneb">@cavneb</a>) presented on how to &ldquo;Test Drive&rdquo; your Ember applications. Eric starts from scratch and walks through different types of tests that can be written. By the end, you will have a much better understanding of how to test your Ember application.</p>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/GRT5YcXmm7E" frameborder="0" allowfullscreen></iframe>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>func map&lt;U&gt;(f: (T) -&gt; U) -&gt; U?</span></code></pre></td></tr></table></div></figure>
 
 
-<p><a href="http://cavneb.github.io/presentations-2014.01.23-Ember-Testing">Slides</a> |
-<a href="https://github.com/cavneb/presentations-2014.01.23-Ember-Testing/tree/master/ember-app">Code</a></p>
+<p>Here we can see that map takes a single function from <code>(T)-&gt;U</code> as a parameter and returns an <code>U?</code> (which is just nice syntax for <code>Optional&lt;U&gt;</code>) as a result. Remember that <code>T</code> is the generic parameter type of the <code>Optional</code> on which you are calling <code>map</code>. This effectively allows us to take an object wrapped up in an <code>Optional</code> <a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html">context</a> and apply a function to it resulting in an <code>Optional</code> object of the given function&rsquo;s return type.</p>
 
-<h2>Nerd with us!</h2>
+<p>Higher order functions like <code>map</code> are common in functional programming languages. For example, Haskell defines a function <code>fmap</code> that performs the same operation as <code>Optional.map</code>. Haskell programmers use this function so often that they&rsquo;ve even given it an operator: <code>&lt;$&gt;</code>, and many Swift programmers are <a href="https://github.com/typelift/swiftz">following suit</a> (though, due to some limitations on special characters in Swift, most implementations seem to have settled on <code>&lt;^&gt;</code> for that paricular operation).</p>
 
-<p>Feel free to join our monthly meetups (even remotely). The meetings are posted at <a href="http://www.meetup.com/EmberJS-SLC/">http://www.meetup.com/EmberJS-SLC/</a>.</p>
+<p>When confronted with new symbols and <a href="http://chris.eidhof.nl/posts/json-parsing-in-swift.html">unfamiliar techniques for solving problems</a> in a strictly typed language like Swift, I find it helps to follow the types.</p>
+
+<p>Photo by <a href="https://www.flickr.com/photos/hortulus_aptus/">Seán A. O&#8217;Hara</a>. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</p>
+
+<div class="about-box">
+  <img src="http://0.gravatar.com/avatar/43f93ddd5058f44ffe579d923945117a" class="avatar" align="left" />
+  <p>
+    Derrick Hathaway is a Sr. Mobile Engineer at Instructure. He is currently working on making Instructure&#8217;s iOS apps more awesome! <br />
+    <a href="https://github.com/derrh">Github</a> and
+    <a href="http://twitter.com/derrh">Twitter</a>.
+  </p>
+</div>
+
+
+
 </div>
 
 
@@ -151,7 +162,7 @@
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Instructure</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Derrick Hathaway</span></span>
 
       
 
@@ -165,12 +176,12 @@
   
 
 
-<time datetime="2014-01-24T08:58:00-07:00" pubdate data-updated="true">Jan 24<span>th</span>, 2014</time>
+<time datetime="2015-02-05T14:11:00-07:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/emberjs/'>EmberJS</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>
+    <a class='category' href='/blog/categories/functional-programming/'>Functional Programming</a>, <a class='category' href='/blog/categories/swift/'>Swift</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>
   
 </span>
 
@@ -179,7 +190,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/" data-via="" data-counturl="http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://instructure.github.io/blog/2015/02/05/just-follow-the-types/" data-via="" data-counturl="http://instructure.github.io/blog/2015/02/05/just-follow-the-types/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -192,10 +203,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c/" title="Previous Post: Faster I18n Backend for Ruby Written in C">&laquo; Faster I18n Backend for Ruby Written in C</a>
+        <a class="basic-alignment left" href="/blog/2014/09/25/accessible-dialogs/" title="Previous Post: Breaking the Rules: Accessible Dialog Components">&laquo; Breaking the Rules: Accessible Dialog Components</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/02/24/ci/" title="Next Post: Continuous Integration">Continuous Integration &raquo;</a>
       
     </p>
   </footer>
@@ -279,8 +288,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/';
-        var disqus_url = 'http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/';
+        var disqus_identifier = 'http://instructure.github.io/blog/2015/02/05/just-follow-the-types/';
+        var disqus_url = 'http://instructure.github.io/blog/2015/02/05/just-follow-the-types/';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Functional Programming | Instructure Tech Blog]]></title>
+  <link href="http://instructure.github.io/blog/categories/functional-programming/atom.xml" rel="self"/>
+  <link href="http://instructure.github.io/"/>
+  <updated>2015-02-05T09:24:43-07:00</updated>
+  <id>http://instructure.github.io/</id>
+  <author>
+    <name><![CDATA[Instructure]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Just Follow the Types]]></title>
+    <link href="http://instructure.github.io/blog/2015/02/05/just-follow-the-types/"/>
+    <updated>2015-02-05T14:11:00-07:00</updated>
+    <id>http://instructure.github.io/blog/2015/02/05/just-follow-the-types</id>
+    <content type="html"><![CDATA[<p>As Mac and iOS craftsmen we&rsquo;ve been given a new tool. In some ways it looks a lot like the old tool, a tool we&rsquo;ve been using for many years now. In many ways it is very different. This tool is, of course, the Swift programming language.</p>
+
+<p>A strict type system is one thing that differentiates Swift from Objective-C.<!-- more --> This type system, along with other related features like generic types and custom operators, has started a movement among developers to adopt some techniques that Swift&rsquo;s predecessor made difficult or impossible. Some of these language features and techniques come from the language Haskell, one of the many languages Chris Lattner <a href="http://nondot.org/sabre/">drew inspiration from in creating Swift</a>.</p>
+
+<p><img class="right half <a" src="href="https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg">https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg</a>" width="375" height="500" title="&ldquo;An old rusty tool.&rdquo; &ldquo;An old rusty tool.&rdquo;" ></p>
+
+<p>As I try to learn and adopt these new techniques I feel a bit like a woodworker who&rsquo;s been given a new tool, one with new features that I don&rsquo;t completely understand. One trick I&rsquo;ve learned is that with such a strong type system comes certain affordances.</p>
+
+<p>Let&rsquo;s look at an example.</p>
+
+<p><code>Optional</code> has a method called <code>map</code>. Now if you&rsquo;ve used <code>map</code> functions that are common for collection types you might be able to intuit what this map function does. An <code>Optional</code> isn&rsquo;t an array, however, so it might still be a little confusing. But if you take a moment to inspect the type of <code>map</code> you will see the trail of breadcrumbs.
+<code>
+func map&lt;U&gt;(f: (T) -&gt; U) -&gt; U?
+</code></p>
+
+<p>Here we can see that map takes a single function from <code>(T)-&gt;U</code> as a parameter and returns an <code>U?</code> (which is just nice syntax for <code>Optional&lt;U&gt;</code>) as a result. Remember that <code>T</code> is the generic parameter type of the <code>Optional</code> on which you are calling <code>map</code>. This effectively allows us to take an object wrapped up in an <code>Optional</code> <a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html">context</a> and apply a function to it resulting in an <code>Optional</code> object of the given function&rsquo;s return type.</p>
+
+<p>Higher order functions like <code>map</code> are common in functional programming languages. For example, Haskell defines a function <code>fmap</code> that performs the same operation as <code>Optional.map</code>. Haskell programmers use this function so often that they&rsquo;ve even given it an operator: <code>&lt;$&gt;</code>, and many Swift programmers are <a href="https://github.com/typelift/swiftz">following suit</a> (though, due to some limitations on special characters in Swift, most implementations seem to have settled on <code>&lt;^&gt;</code> for that paricular operation).</p>
+
+<p>When confronted with new symbols and <a href="http://chris.eidhof.nl/posts/json-parsing-in-swift.html">unfamiliar techniques for solving problems</a> in a strictly typed language like Swift, I find it helps to follow the types.</p>
+
+<p>Photo by <a href="https://www.flickr.com/photos/hortulus_aptus/">Seán A. O'Hara</a>. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</p>
+
+<p><div class="about-box">
+  <img src="http://0.gravatar.com/avatar/43f93ddd5058f44ffe579d923945117a" class="avatar" align="left" />
+  <p>
+    Derrick Hathaway is a Sr. Mobile Engineer at Instructure. He is currently working on making Instructure's iOS apps more awesome! <br />
+    <a href="https://github.com/derrh">Github</a> and
+    <a href="http://twitter.com/derrh">Twitter</a>.
+  </p>
+</div>
+</p>
+]]></content>
+  </entry>
+  
+</feed>

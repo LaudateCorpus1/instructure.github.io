@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2015-03-02T09:38:02-07:00</updated>
+  <updated>2017-07-24T14:43:09-07:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Ember Tech Talks - April 2014]]></title>
     <link href="http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014/"/>
-    <updated>2014-04-28T09:19:00-06:00</updated>
+    <updated>2014-04-28T09:19:00-07:00</updated>
     <id>http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014</id>
     <content type="html"><![CDATA[<p>Each month, geeks from near and far join up at Instructure to teach and learn
 about <a href="http://emberjs.com">Ember.js</a>. This month we had 3 amazing presentations
@@ -46,7 +46,7 @@ which range from beginner to expert level training.</p>
   <entry>
     <title type="html"><![CDATA[Ember Run Loop and TDD]]></title>
     <link href="http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/"/>
-    <updated>2014-01-24T08:58:00-07:00</updated>
+    <updated>2014-01-24T08:58:00-08:00</updated>
     <id>http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd</id>
     <content type="html"><![CDATA[<p>Each month, <a href="http://www.meetup.com/EmberJS-SLC/">nerds unite</a> at the Instructure building to share their knowledge on <a href="http://www.emberjs.com">Ember</a>. This month we had two presentations by a couple of Instructure engineers. Here are the videos and accompanying slides/code.</p>
 
@@ -78,7 +78,7 @@ which range from beginner to expert level training.</p>
   <entry>
     <title type="html"><![CDATA[Facebook React vs. Ember]]></title>
     <link href="http://instructure.github.io/blog/2013/12/17/facebook-react-vs-ember/"/>
-    <updated>2013-12-17T08:54:00-07:00</updated>
+    <updated>2013-12-17T08:54:00-08:00</updated>
     <id>http://instructure.github.io/blog/2013/12/17/facebook-react-vs-ember</id>
     <content type="html"><![CDATA[<div class="comment">Edited Jan 13, 2014 with minor changes which allow for testing timeouts in Ember.</div>
 
@@ -96,7 +96,7 @@ which range from beginner to expert level training.</p>
 
 <p>React components take data and return content which is to be displayed. Here&rsquo;s their example code:</p>
 
-<p>
+<p>{% raw %}
 ```js React
 /<em>* @jsx React.DOM </em>/
 var HelloMessage = React.createClass({
@@ -110,11 +110,11 @@ var HelloMessage = React.createClass({
 
 <p>React.renderComponent(<HelloMessage name="John" />, mountNode);
 ```
-</p>
+{% endraw %}</p>
 
 <p>Let&rsquo;s build this in Ember. For something as simple as this example, a <a href="http://emberjs.com/guides/templates/writing-helpers/">Handlebars Helper</a> will do the trick.</p>
 
-<p>
+<p>{% raw %}
 ```js Ember
 Ember.Handlebars.helper(&lsquo;hello-message&rsquo;, function(name) {
   var escaped = Handlebars.Utils.escapeExpression(name);
@@ -123,7 +123,7 @@ Ember.Handlebars.helper(&lsquo;hello-message&rsquo;, function(name) {
 
 <p>{{{hello-message &ldquo;John&rdquo;}}}
 ```
-</p>
+{% endraw %}</p>
 
 <h3>Example:</h3>
 
@@ -302,7 +302,7 @@ App.ApplicationController = Em.ArrayController.extend({
 });
 ```</p>
 
-<p>
+<p>{% raw %}
 ```html Ember (template)</p>
 
 <div>
@@ -321,7 +321,7 @@ App.ApplicationController = Em.ArrayController.extend({
 
 
 <p>```
-</p>
+{% endraw %}</p>
 
 <h3>Example:</h3>
 
@@ -331,7 +331,7 @@ App.ApplicationController = Em.ArrayController.extend({
 
 <p>This example on the React website under <em>A Component Using External Plugins</em> is a great example of encapsulating functionality.</p>
 
-<p>
+<p>{% raw %}
 ```js React
 /<em>* @jsx React.DOM </em>/</p>
 
@@ -375,7 +375,7 @@ App.ApplicationController = Em.ArrayController.extend({
 
 <p>React.renderComponent(<MarkdownEditor />, mountNode);
 ```
-</p>
+{% endraw %}</p>
 
 <p>The caveat to this example is that it assumes that the <a href="https://github.com/coreyti/showdown">showdown</a> library is already loaded. In our Ember example, note that the library is loaded in the <em>head</em>.</p>
 
@@ -396,7 +396,7 @@ App.ApplicationRoute = Em.Route.extend({
 });
 ```</p>
 
-<p>
+<p>{% raw %}
 ```html Ember (template)</p>
 
 <div class="container">
@@ -408,7 +408,7 @@ App.ApplicationRoute = Em.Route.extend({
 
 
 <p>```
-</p>
+{% endraw %}</p>
 
 <p>I added Twitter Bootstrap to this example for cleanliness.</p>
 
@@ -416,12 +416,7 @@ App.ApplicationRoute = Em.Route.extend({
 
 <p>I haven&rsquo;t spent enough time with React to be able to convert the <a href="http://www.emberjs.com">Ember examples</a> to it, but I would love to see someone do that for a better comparison.</p>
 
-<p><div class="about-box">
-  <a href="http://coderberry.me"><img src="https://en.gravatar.com/userimage/2313670/31b6875622886c41f150245d58acbd0e.jpg?size=100" class="avatar" align="left" /></a>
-  <p>
-    <a href="http://coderberry.me" class="author-name">Eric Berry</a> is a software engineer at <a href="http://www.instructure.com">Instructure</a> and loves giving back to the community via blog posts and meetups. He was a co-founder of <a href="http://h71028.www7.hp.com/enterprise/cache/504712-0-0-225-121.html">ShareAPhoto, Ltd</a>, a European online photo sharing company which was acquired by Hewlett-Packard in 2006. He was the author of <a href="http://www.amazon.com/Rails-Pocket-Reference-OReilly/dp/0596520700">Rails Pocket Reference</a> (published 2008 – O’Reilly). He spear-headed <a href="http://teachmetocode.com/screencasts/page/9/">TeachMeToCode.com</a>, a popular on-demand screencasting website dedicated to helping others learn how to program.
-  </p>
-</div></p>
+<p>{% render_partial _authors/ericb.html %}</p>
 ]]></content>
   </entry>
   

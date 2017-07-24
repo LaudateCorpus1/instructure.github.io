@@ -4,7 +4,7 @@
   <title><![CDATA[Category: accessibility | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/accessibility/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2015-03-02T09:38:02-07:00</updated>
+  <updated>2017-07-24T14:43:09-07:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Breaking the Rules: Accessible Dialog Components]]></title>
     <link href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/"/>
-    <updated>2014-09-25T09:00:00-06:00</updated>
+    <updated>2014-09-25T09:00:00-07:00</updated>
     <id>http://instructure.github.io/blog/2014/09/25/accessible-dialogs</id>
     <content type="html"><![CDATA[<p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
 
@@ -105,24 +105,14 @@ always keep up.</p>
 we choose to focus on the experience of our users (oh, right, and
 <a href="http://webaim.org/services/certification/">getting certified</a>).</p>
 
-<p><div class="about-box">
-  <img src="http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7?s=100" class="avatar" align="left" />
-  <p>
-    Ryan Florence heads up the Web Frameworks team at Instructure where
-    they chase both squirrels and JavaScript frameworks, inviting the
-    rest of the team to join them. Follow his adventures on 
-    <a href="https://github.com/rpflorence">Github</a> and 
-    <a href="http://twitter.com/ryanflorence">Twitter</a>.
-  </p>
-</div>
-</p>
+<p>{% render_partial _authors/ryanf.html %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Approaching Accessibility Testing]]></title>
     <link href="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/"/>
-    <updated>2014-06-17T16:37:00-06:00</updated>
+    <updated>2014-06-17T16:37:00-07:00</updated>
     <id>http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing</id>
     <content type="html"><![CDATA[<p>When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing was correct. I fed a URL to an online accessibility evaluator, which then told me what elements were missing on the page (ie: an image did not have an alt tag). It wasn&rsquo;t until I met a blind person that I started to understand how people with visual impairments actually use the web. Over the years, I picked up a lot of insight on how to conduct accessibility testing, which I want to share with you.</p>
 
@@ -187,7 +177,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Generating Accessible Colors in JavaScript]]></title>
     <link href="http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript/"/>
-    <updated>2013-12-30T14:42:00-07:00</updated>
+    <updated>2013-12-30T14:42:00-08:00</updated>
     <id>http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript</id>
     <content type="html"><![CDATA[<p>We recently released a major upgrade to Canvas&rsquo;s calendar. Although the primary objective was adding an agenda view and other accessibility tools, we also took the opportunity to update its visual design, including the color coding that links events and calendars. We&rsquo;ve released this new color code generator as a Bower package at <a href="https://github.com/instructure/color-slicer">github/instructure/color-slicer</a>. Here&rsquo;s why we switched.</p>
 
@@ -240,7 +230,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Crafting accessible content]]></title>
     <link href="http://instructure.github.io/blog/2013/12/02/crafting-accessible-content/"/>
-    <updated>2013-12-02T09:52:00-07:00</updated>
+    <updated>2013-12-02T09:52:00-08:00</updated>
     <id>http://instructure.github.io/blog/2013/12/02/crafting-accessible-content</id>
     <content type="html"><![CDATA[<p>At Instructure, we&rsquo;re moving more and more of our app to the client with technologies like <a href="http://emberjs.com">Ember.js</a>. While it and other JavaScript frameworks have made this transition easier, they&rsquo;ve also introduced new challenges around keeping our content accessible.</p>
 
@@ -251,7 +241,9 @@ we choose to focus on the experience of our users (oh, right, and
 
 <h2>Getting started with accessibility</h2>
 
-<p><blockquote><p>The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.</p><footer><strong>W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a></strong></footer></blockquote></p>
+<p>{% blockquote W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a> %}
+The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+{% endblockquote %}</p>
 
 <p>Let&rsquo;s start with a few definitions:</p>
 

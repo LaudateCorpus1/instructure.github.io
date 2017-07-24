@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2015-03-02T09:38:02-07:00</updated>
+  <updated>2017-07-24T14:43:09-07:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Faster I18n Backend for Ruby Written in C]]></title>
     <link href="http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c/"/>
-    <updated>2014-01-07T07:32:00-07:00</updated>
+    <updated>2014-01-07T07:32:00-08:00</updated>
     <id>http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c</id>
     <content type="html"><![CDATA[<p>Every so often, we like to do a hack(fest|stravaganza|nado) here at
 Instructure. It&rsquo;s an opportunity for engineers to spend several days

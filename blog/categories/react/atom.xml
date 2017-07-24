@@ -4,7 +4,7 @@
   <title><![CDATA[Category: React | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/react/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2015-03-02T09:38:02-07:00</updated>
+  <updated>2017-07-24T14:43:09-07:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Breaking the Rules: Accessible Dialog Components]]></title>
     <link href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/"/>
-    <updated>2014-09-25T09:00:00-06:00</updated>
+    <updated>2014-09-25T09:00:00-07:00</updated>
     <id>http://instructure.github.io/blog/2014/09/25/accessible-dialogs</id>
     <content type="html"><![CDATA[<p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
 
@@ -105,17 +105,7 @@ always keep up.</p>
 we choose to focus on the experience of our users (oh, right, and
 <a href="http://webaim.org/services/certification/">getting certified</a>).</p>
 
-<p><div class="about-box">
-  <img src="http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7?s=100" class="avatar" align="left" />
-  <p>
-    Ryan Florence heads up the Web Frameworks team at Instructure where
-    they chase both squirrels and JavaScript frameworks, inviting the
-    rest of the team to join them. Follow his adventures on 
-    <a href="https://github.com/rpflorence">Github</a> and 
-    <a href="http://twitter.com/ryanflorence">Twitter</a>.
-  </p>
-</div>
-</p>
+<p>{% render_partial _authors/ryanf.html %}</p>
 ]]></content>
   </entry>
   

@@ -2,88 +2,88 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://instructure.github.io/blog/2013/12/02/hello-world/</loc>
-        <lastmod>2013-12-04T09:57:36-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2013/12/02/crafting-accessible-content/</loc>
-        <lastmod>2013-12-04T09:57:36-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2013/12/09/volley-vs-retrofit/</loc>
-        <lastmod>2014-01-07T08:10:12-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2013/12/17/facebook-react-vs-ember/</loc>
-        <lastmod>2014-01-13T12:38:31-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript/
         </loc>
-        <lastmod>2013-12-30T09:21:30-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c/
         </loc>
-        <lastmod>2014-01-17T11:05:36-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/</loc>
-        <lastmod>2014-01-24T10:42:44-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/02/24/ci/</loc>
-        <lastmod>2014-02-24T09:11:59-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/04/21/android-image-sweep/</loc>
-        <lastmod>2014-04-22T15:37:39-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014/</loc>
-        <lastmod>2014-04-28T09:41:55-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>
             http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/
         </loc>
-        <lastmod>2014-05-14T08:29:04-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/</loc>
-        <lastmod>2014-06-25T09:04:06-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/08/04/balanced-product-management/</loc>
-        <lastmod>2014-08-04T10:19:37-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2014/09/25/accessible-dialogs/</loc>
-        <lastmod>2014-09-24T20:51:46-06:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/blog/2015/02/05/just-follow-the-types/</loc>
-        <lastmod>2015-02-05T09:31:46-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://instructure.github.io/blog/archives/</loc>
-        <lastmod>2015-02-05T09:31:46-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://instructure.github.io/blog/</loc>
-        <lastmod>2015-02-05T09:31:46-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://instructure.github.io/</loc>
-        <lastmod>2015-02-05T09:31:46-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/mobile-app-api/</loc>
-        <lastmod>2013-12-04T07:39:29-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://instructure.github.io/blog/</loc>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://instructure.github.io/blog/archives/</loc>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://instructure.github.io/</loc>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
     <url>
         <loc>http://instructure.github.io/robots.txt</loc>
-        <lastmod>2013-12-04T07:39:29-07:00</lastmod>
+        <lastmod>2017-07-24T14:31:32-07:00</lastmod>
     </url>
 </urlset>

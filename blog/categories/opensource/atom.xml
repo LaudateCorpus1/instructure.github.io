@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opensource | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/opensource/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2015-03-02T09:38:02-07:00</updated>
+  <updated>2017-07-24T14:43:09-07:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[ImageSweep : drawable management for Android]]></title>
     <link href="http://instructure.github.io/blog/2014/04/21/android-image-sweep/"/>
-    <updated>2014-04-21T07:29:00-06:00</updated>
+    <updated>2014-04-21T07:29:00-07:00</updated>
     <id>http://instructure.github.io/blog/2014/04/21/android-image-sweep</id>
     <content type="html"><![CDATA[<p>Software engineering is full of trade-offs: speed/memory usage, features/bugs, etc.
 The list goes on and on. The Android team here at Instructure found an interesting trade-off: developer-time versus application size.

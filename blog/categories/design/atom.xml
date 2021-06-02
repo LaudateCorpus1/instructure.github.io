@@ -4,7 +4,7 @@
   <title><![CDATA[Category: design | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/design/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2017-07-25T11:23:12-07:00</updated>
+  <updated>2021-05-27T15:45:04-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Generating Accessible Colors in JavaScript]]></title>
     <link href="http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript/"/>
-    <updated>2013-12-30T14:42:00-08:00</updated>
+    <updated>2013-12-30T14:42:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript</id>
     <content type="html"><![CDATA[<p>We recently released a major upgrade to Canvas&rsquo;s calendar. Although the primary objective was adding an agenda view and other accessibility tools, we also took the opportunity to update its visual design, including the color coding that links events and calendars. We&rsquo;ve released this new color code generator as a Bower package at <a href="https://github.com/instructure/color-slicer">github/instructure/color-slicer</a>. Here&rsquo;s why we switched.</p>
 

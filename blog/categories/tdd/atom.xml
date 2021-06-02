@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TDD | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/tdd/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2017-07-25T11:23:12-07:00</updated>
+  <updated>2021-05-27T15:45:04-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Too big to test: combating test apathy in legacy code]]></title>
     <link href="http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/"/>
-    <updated>2014-05-14T10:53:00-07:00</updated>
+    <updated>2014-05-14T10:53:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code</id>
     <content type="html"><![CDATA[<p>Writing tests for large Rails apps with lots of dependencies and complicated modeling is, without question, a complete nightmare. We often spend more time wrestling with tests than we do writing code. The end result of writing tests for legacy code is unfortunately predictable: a test suite full of holes, poor coverage, and tests that aren&rsquo;t actually testing the thing you think they are. Bugs begin to pile up, technical debt is avoided like the plague, and quick-fix bandaids are applied instead of addressing the problems head on.</p>
 

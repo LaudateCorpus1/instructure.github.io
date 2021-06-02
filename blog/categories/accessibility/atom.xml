@@ -4,7 +4,7 @@
   <title><![CDATA[Category: accessibility | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/accessibility/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2017-07-25T11:23:12-07:00</updated>
+  <updated>2021-05-27T15:45:04-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Breaking the Rules: Accessible Dialog Components]]></title>
     <link href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/"/>
-    <updated>2014-09-25T09:00:00-07:00</updated>
+    <updated>2014-09-25T09:00:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/09/25/accessible-dialogs</id>
     <content type="html"><![CDATA[<p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
 
@@ -112,7 +112,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Approaching Accessibility Testing]]></title>
     <link href="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/"/>
-    <updated>2014-06-17T16:37:00-07:00</updated>
+    <updated>2014-06-17T16:37:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing</id>
     <content type="html"><![CDATA[<p>When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing was correct. I fed a URL to an online accessibility evaluator, which then told me what elements were missing on the page (ie: an image did not have an alt tag). It wasn&rsquo;t until I met a blind person that I started to understand how people with visual impairments actually use the web. Over the years, I picked up a lot of insight on how to conduct accessibility testing, which I want to share with you.</p>
 
@@ -177,7 +177,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Generating Accessible Colors in JavaScript]]></title>
     <link href="http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript/"/>
-    <updated>2013-12-30T14:42:00-08:00</updated>
+    <updated>2013-12-30T14:42:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript</id>
     <content type="html"><![CDATA[<p>We recently released a major upgrade to Canvas&rsquo;s calendar. Although the primary objective was adding an agenda view and other accessibility tools, we also took the opportunity to update its visual design, including the color coding that links events and calendars. We&rsquo;ve released this new color code generator as a Bower package at <a href="https://github.com/instructure/color-slicer">github/instructure/color-slicer</a>. Here&rsquo;s why we switched.</p>
 
@@ -230,7 +230,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Crafting accessible content]]></title>
     <link href="http://instructure.github.io/blog/2013/12/02/crafting-accessible-content/"/>
-    <updated>2013-12-02T09:52:00-08:00</updated>
+    <updated>2013-12-02T09:52:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/02/crafting-accessible-content</id>
     <content type="html"><![CDATA[<p>At Instructure, we&rsquo;re moving more and more of our app to the client with technologies like <a href="http://emberjs.com">Ember.js</a>. While it and other JavaScript frameworks have made this transition easier, they&rsquo;ve also introduced new challenges around keeping our content accessible.</p>
 

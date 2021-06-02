@@ -4,7 +4,7 @@
   <title><![CDATA[Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2017-07-25T11:23:10-07:00</updated>
+  <updated>2021-05-27T15:44:59-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Swift: Just Follow the Types]]></title>
     <link href="http://instructure.github.io/blog/2015/02/05/just-follow-the-types/"/>
-    <updated>2015-02-05T14:11:00-08:00</updated>
+    <updated>2015-02-05T14:11:00-06:00</updated>
     <id>http://instructure.github.io/blog/2015/02/05/just-follow-the-types</id>
     <content type="html"><![CDATA[<p>As Mac and iOS craftsmen we&rsquo;ve been given a new tool. In some ways it looks a lot like the old tool, a tool we&rsquo;ve been using for many years now. In many ways it is very different. This tool is, of course, the Swift programming language.</p>
 
@@ -59,7 +59,7 @@
   <entry>
     <title type="html"><![CDATA[Breaking the Rules: Accessible Dialog Components]]></title>
     <link href="http://instructure.github.io/blog/2014/09/25/accessible-dialogs/"/>
-    <updated>2014-09-25T09:00:00-07:00</updated>
+    <updated>2014-09-25T09:00:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/09/25/accessible-dialogs</id>
     <content type="html"><![CDATA[<p>Turns out, <code>role="dialog"</code> isn&rsquo;t your friend.</p>
 
@@ -161,7 +161,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Balanced Product Management]]></title>
     <link href="http://instructure.github.io/blog/2014/08/04/balanced-product-management/"/>
-    <updated>2014-08-04T09:54:00-07:00</updated>
+    <updated>2014-08-04T09:54:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/08/04/balanced-product-management</id>
     <content type="html"><![CDATA[<p>If you look at job descriptions and blogs about product-y things, there are lots of opinions about what makes a great product manager. They talk about owning strategy, roadmaps, markets, and plans. You&rsquo;re like the CEO of your product and use your über creativity to find the special sauce and make all the decisions. Then everyone will be on board with your vision, singing your praises, and sparkly rainbow unicorns will lead your company down the path to IPO.</p>
 
@@ -189,7 +189,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Approaching Accessibility Testing]]></title>
     <link href="http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing/"/>
-    <updated>2014-06-17T16:37:00-07:00</updated>
+    <updated>2014-06-17T16:37:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/06/17/approaching-accessibility-testing</id>
     <content type="html"><![CDATA[<p>When I first started learning about accessibility, I had no idea what I was doing. I am a sighted person, and didn&rsquo;t know if what I was doing was correct. I fed a URL to an online accessibility evaluator, which then told me what elements were missing on the page (ie: an image did not have an alt tag). It wasn&rsquo;t until I met a blind person that I started to understand how people with visual impairments actually use the web. Over the years, I picked up a lot of insight on how to conduct accessibility testing, which I want to share with you.</p>
 
@@ -254,7 +254,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Too big to test: combating test apathy in legacy code]]></title>
     <link href="http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code/"/>
-    <updated>2014-05-14T10:53:00-07:00</updated>
+    <updated>2014-05-14T10:53:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/05/14/too-big-to-test-combating-test-apathy-in-legacy-code</id>
     <content type="html"><![CDATA[<p>Writing tests for large Rails apps with lots of dependencies and complicated modeling is, without question, a complete nightmare. We often spend more time wrestling with tests than we do writing code. The end result of writing tests for legacy code is unfortunately predictable: a test suite full of holes, poor coverage, and tests that aren&rsquo;t actually testing the thing you think they are. Bugs begin to pile up, technical debt is avoided like the plague, and quick-fix bandaids are applied instead of addressing the problems head on.</p>
 
@@ -356,7 +356,7 @@ we choose to focus on the experience of our users (oh, right, and
   <entry>
     <title type="html"><![CDATA[Ember Tech Talks - April 2014]]></title>
     <link href="http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014/"/>
-    <updated>2014-04-28T09:19:00-07:00</updated>
+    <updated>2014-04-28T09:19:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/04/28/ember-tech-talks-april-2014</id>
     <content type="html"><![CDATA[<p>Each month, geeks from near and far join up at Instructure to teach and learn
 about <a href="http://emberjs.com">Ember.js</a>. This month we had 3 amazing presentations
@@ -386,7 +386,7 @@ which range from beginner to expert level training.</p>
   <entry>
     <title type="html"><![CDATA[ImageSweep : drawable management for Android]]></title>
     <link href="http://instructure.github.io/blog/2014/04/21/android-image-sweep/"/>
-    <updated>2014-04-21T07:29:00-07:00</updated>
+    <updated>2014-04-21T07:29:00-05:00</updated>
     <id>http://instructure.github.io/blog/2014/04/21/android-image-sweep</id>
     <content type="html"><![CDATA[<p>Software engineering is full of trade-offs: speed/memory usage, features/bugs, etc.
 The list goes on and on. The Android team here at Instructure found an interesting trade-off: developer-time versus application size.
@@ -418,7 +418,7 @@ This correlated to a <em>46%</em> size decrease on the apk itself and <em>26%</e
   <entry>
     <title type="html"><![CDATA[Continuous Integration]]></title>
     <link href="http://instructure.github.io/blog/2014/02/24/ci/"/>
-    <updated>2014-02-24T11:04:00-08:00</updated>
+    <updated>2014-02-24T11:04:00-06:00</updated>
     <id>http://instructure.github.io/blog/2014/02/24/ci</id>
     <content type="html"><![CDATA[<p>Parallelization, Selenium, AWS, and a CI server are common implementations for agile
 shops, and we are no exception. Since I&rsquo;ve been here, maintenance hasn&rsquo;t
@@ -496,7 +496,7 @@ language for tighter integration and better maintenance with more consistency be
   <entry>
     <title type="html"><![CDATA[Ember Run Loop and TDD]]></title>
     <link href="http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd/"/>
-    <updated>2014-01-24T08:58:00-08:00</updated>
+    <updated>2014-01-24T08:58:00-06:00</updated>
     <id>http://instructure.github.io/blog/2014/01/24/ember-run-loop-and-tdd</id>
     <content type="html"><![CDATA[<p>Each month, <a href="http://www.meetup.com/EmberJS-SLC/">nerds unite</a> at the Instructure building to share their knowledge on <a href="http://www.emberjs.com">Ember</a>. This month we had two presentations by a couple of Instructure engineers. Here are the videos and accompanying slides/code.</p>
 
@@ -528,7 +528,7 @@ language for tighter integration and better maintenance with more consistency be
   <entry>
     <title type="html"><![CDATA[Faster I18n Backend for Ruby Written in C]]></title>
     <link href="http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c/"/>
-    <updated>2014-01-07T07:32:00-08:00</updated>
+    <updated>2014-01-07T07:32:00-06:00</updated>
     <id>http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c</id>
     <content type="html"><![CDATA[<p>Every so often, we like to do a hack(fest|stravaganza|nado) here at
 Instructure. It&rsquo;s an opportunity for engineers to spend several days
@@ -648,7 +648,7 @@ for more information and benchmarks.</p>
   <entry>
     <title type="html"><![CDATA[Generating Accessible Colors in JavaScript]]></title>
     <link href="http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript/"/>
-    <updated>2013-12-30T14:42:00-08:00</updated>
+    <updated>2013-12-30T14:42:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/30/generating-accessible-colors-in-javascript</id>
     <content type="html"><![CDATA[<p>We recently released a major upgrade to Canvas&rsquo;s calendar. Although the primary objective was adding an agenda view and other accessibility tools, we also took the opportunity to update its visual design, including the color coding that links events and calendars. We&rsquo;ve released this new color code generator as a Bower package at <a href="https://github.com/instructure/color-slicer">github/instructure/color-slicer</a>. Here&rsquo;s why we switched.</p>
 
@@ -701,7 +701,7 @@ for more information and benchmarks.</p>
   <entry>
     <title type="html"><![CDATA[Facebook React vs. Ember]]></title>
     <link href="http://instructure.github.io/blog/2013/12/17/facebook-react-vs-ember/"/>
-    <updated>2013-12-17T08:54:00-08:00</updated>
+    <updated>2013-12-17T08:54:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/17/facebook-react-vs-ember</id>
     <content type="html"><![CDATA[<div class="comment">Edited Jan 13, 2014 with minor changes which allow for testing timeouts in Ember.</div>
 
@@ -1144,7 +1144,7 @@ for more information and benchmarks.</p>
   <entry>
     <title type="html"><![CDATA[Android Async HTTP Clients: Volley vs Retrofit]]></title>
     <link href="http://instructure.github.io/blog/2013/12/09/volley-vs-retrofit/"/>
-    <updated>2013-12-09T13:47:00-08:00</updated>
+    <updated>2013-12-09T13:47:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/09/volley-vs-retrofit</id>
     <content type="html"><![CDATA[<p>We recently released a new version of our mobile app for Android. Although it was a huge improvement from previous installments in terms of features, design, and usability, there was one nagging issue in the back of our minds: speed. There are times when the app isn’t as snappy as we’d like it to be. After some profiling, benchmarks, and common sense, we determined that retrieving data from the API (the networking) was the bottleneck.</p>
 
@@ -1211,7 +1211,7 @@ for more information and benchmarks.</p>
   <entry>
     <title type="html"><![CDATA[Crafting accessible content]]></title>
     <link href="http://instructure.github.io/blog/2013/12/02/crafting-accessible-content/"/>
-    <updated>2013-12-02T09:52:00-08:00</updated>
+    <updated>2013-12-02T09:52:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/02/crafting-accessible-content</id>
     <content type="html"><![CDATA[<p>At Instructure, we&rsquo;re moving more and more of our app to the client with technologies like <a href="http://emberjs.com">Ember.js</a>. While it and other JavaScript frameworks have made this transition easier, they&rsquo;ve also introduced new challenges around keeping our content accessible.</p>
 
@@ -1336,7 +1336,7 @@ for more information and benchmarks.</p>
   <entry>
     <title type="html"><![CDATA[Hello World!]]></title>
     <link href="http://instructure.github.io/blog/2013/12/02/hello-world/"/>
-    <updated>2013-12-02T08:39:00-08:00</updated>
+    <updated>2013-12-02T08:39:00-06:00</updated>
     <id>http://instructure.github.io/blog/2013/12/02/hello-world</id>
     <content type="html"><![CDATA[<p>Welcome to our new blog! Instructure is a technology company. And we have some pretty killer technologists who have opinions. This blog is an outlet for them to talk about stuff.</p>
 

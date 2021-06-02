@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2017-07-25T11:23:12-07:00</updated>
+  <updated>2021-05-27T15:45:04-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Swift: Just Follow the Types]]></title>
     <link href="http://instructure.github.io/blog/2015/02/05/just-follow-the-types/"/>
-    <updated>2015-02-05T14:11:00-08:00</updated>
+    <updated>2015-02-05T14:11:00-06:00</updated>
     <id>http://instructure.github.io/blog/2015/02/05/just-follow-the-types</id>
     <content type="html"><![CDATA[<p>As Mac and iOS craftsmen we&rsquo;ve been given a new tool. In some ways it looks a lot like the old tool, a tool we&rsquo;ve been using for many years now. In many ways it is very different. This tool is, of course, the Swift programming language.</p>
 

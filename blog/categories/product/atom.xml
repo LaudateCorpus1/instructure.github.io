@@ -4,7 +4,7 @@
   <title><![CDATA[Category: product | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/product/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2021-05-27T15:45:04-05:00</updated>
+  <updated>2021-06-02T13:06:34-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -31,7 +31,7 @@
 
 <p>The trick is in the balance. A good product person keeps an eye on where the market is going, what users need today, things that are confusing or broken, code that&rsquo;s old and crusty, what&rsquo;s losing sales to competitors, where the terrible UX/UI is, and all the executive initiatives.</p>
 
-<p>{% img right half /images/product_eyes.jpg 400 400 &ldquo;This is the wrong way to do product.&rdquo; &ldquo;Many-eyed monster with OK on its shirt.&rdquo; %}</p>
+<p><img class="right half" src="/images/product_eyes.jpg" width="400" height="400" title="&ldquo;This is the wrong way to do product.&rdquo; &ldquo;Many-eyed monster with OK on its shirt.&rdquo;" ></p>
 
 <p>However, having all those bosses doesn&rsquo;t mean you just do what they tell you to do. The other side to the balance is knowing enough about everything to be able to prioritize, say “no,” and live with your bosses' inevitable disapproval.</p>
 

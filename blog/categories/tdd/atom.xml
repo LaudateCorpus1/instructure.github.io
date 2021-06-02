@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TDD | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/tdd/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2021-05-27T15:45:04-05:00</updated>
+  <updated>2021-06-02T13:06:34-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -105,7 +105,12 @@
 
 <p>If anything, a well-written test just proves that you&rsquo;re right, and who doesn&rsquo;t love being right?</p>
 
-<p>{% render_partial _authors/liz.html %}</p>
+<p><div class="about-box">
+  <a href="http://feministy.io"><img src="https://www.gravatar.com/avatar/c79fa237a028944ad06a4b0a50925120.png" class="avatar" align="left" /></a>
+  <p>
+    <a href="http://feministy.io" class="author-name" target="_blank">Liz Abinante</a> is an engineer for Instructure and co-leader of the <a href="http://www.meetup.com/Girl-Develop-It-Chicago-IL/" target="_blank">Girl Develop It Chicago chapter</a>. She is infectiously enthusiastic about web development, teaching, learning, and tacos. She enjoys writing and <a href="https://speakerdeck.com/feministy/" target="_blank">speaking</a> about education, diversity, and happiness in engineering. Previously, Liz has worked as a writer, editor, and knitwear designer.
+  </p>
+</div></p>
 ]]></content>
   </entry>
   

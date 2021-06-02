@@ -4,7 +4,7 @@
   <title><![CDATA[Category: html | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/html/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2021-05-27T15:45:04-05:00</updated>
+  <updated>2021-06-02T13:06:34-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -27,9 +27,7 @@
 
 <h2>Getting started with accessibility</h2>
 
-<p>{% blockquote W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a> %}
-The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
-{% endblockquote %}</p>
+<p><blockquote><p>The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.</p><footer><strong>W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a></strong></footer></blockquote></p>
 
 <p>Let&rsquo;s start with a few definitions:</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: accessibility | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/accessibility/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2021-05-27T15:45:04-05:00</updated>
+  <updated>2021-06-02T13:06:34-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -105,7 +105,17 @@ always keep up.</p>
 we choose to focus on the experience of our users (oh, right, and
 <a href="http://webaim.org/services/certification/">getting certified</a>).</p>
 
-<p>{% render_partial _authors/ryanf.html %}</p>
+<p><div class="about-box">
+  <img src="http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7?s=100" class="avatar" align="left" />
+  <p>
+    Ryan Florence heads up the Web Frameworks team at Instructure where
+    they chase both squirrels and JavaScript frameworks, inviting the
+    rest of the team to join them. Follow his adventures on 
+    <a href="https://github.com/rpflorence">Github</a> and 
+    <a href="http://twitter.com/ryanflorence">Twitter</a>.
+  </p>
+</div>
+</p>
 ]]></content>
   </entry>
   
@@ -241,9 +251,7 @@ we choose to focus on the experience of our users (oh, right, and
 
 <h2>Getting started with accessibility</h2>
 
-<p>{% blockquote W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a> %}
-The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
-{% endblockquote %}</p>
+<p><blockquote><p>The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.</p><footer><strong>W3 <a href="http://www.w3.org/standards/webdesign/accessibility">http://www.w3.org/standards/webdesign/accessibility</a></strong></footer></blockquote></p>
 
 <p>Let&rsquo;s start with a few definitions:</p>
 

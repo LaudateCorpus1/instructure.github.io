@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Instructure Tech Blog]]></title>
   <link href="http://instructure.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://instructure.github.io/"/>
-  <updated>2021-05-27T15:45:04-05:00</updated>
+  <updated>2021-06-02T13:06:34-05:00</updated>
   <id>http://instructure.github.io/</id>
   <author>
     <name><![CDATA[Instructure]]></name>
@@ -22,7 +22,7 @@
 
 <p>A strict type system is one thing that differentiates Swift from Objective-C.<!-- more --> This type system, along with other related features like generic types and custom operators, has started a movement among developers to adopt some techniques that Swift&rsquo;s predecessor made difficult or impossible. Some of these language features and techniques come from the language Haskell, one of the many languages Chris Lattner <a href="http://nondot.org/sabre/">drew inspiration from in creating Swift</a>.</p>
 
-<p>{% img right half <a href="https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg">https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg</a> 375 500 &ldquo;An old rusty tool.&rdquo; &ldquo;An old rusty tool.&rdquo; %}</p>
+<p><img class="right half <a" src="href="https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg">https://farm3.static.flickr.com/2658/4293485922_7474ef04ce.jpg</a>" width="375" height="500" title="&ldquo;An old rusty tool.&rdquo; &ldquo;An old rusty tool.&rdquo;" ></p>
 
 <p>As I try to learn and adopt these new techniques I feel a bit like a woodworker who&rsquo;s been given a new tool, one with new features that I don&rsquo;t completely understand. One trick I&rsquo;ve learned is that with such a strong type system comes certain affordances.</p>
 
@@ -41,7 +41,15 @@ func map&lt;U&gt;(f: (T) -&gt; U) -&gt; U?
 
 <p>Photo by <a href="https://www.flickr.com/photos/hortulus_aptus/">Seán A. O'Hara</a>. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</p>
 
-<p>{% render_partial _authors/derrick.html %}</p>
+<p><div class="about-box">
+  <img src="http://0.gravatar.com/avatar/43f93ddd5058f44ffe579d923945117a" class="avatar" align="left" />
+  <p>
+    Derrick Hathaway is a Sr. Mobile Engineer at Instructure. He is currently working on making Instructure's iOS apps more awesome! <br />
+    <a href="https://github.com/derrh">Github</a> and
+    <a href="http://twitter.com/derrh">Twitter</a>.
+  </p>
+</div>
+</p>
 ]]></content>
   </entry>
   
